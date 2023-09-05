@@ -73,3 +73,6 @@ Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 2023-09-05 14:49:23.505 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
 2023-09-05 14:49:23.505 [info] > git config --get commit.template [6ms]
 2023-09-05 14:49:23.789 [info] > git status -z -uall [281ms]
+2023-09-05 14:51:09.393 [info] > git check-ignore -v -z --stdin [11ms]
+2023-09-05 14:52:11.218 [info] > git check-ignore -v -z --stdin [12ms]
+2023-09-05 15:01:21.676 [info] > git check-ignore -v -z --stdin [11ms]
