@@ -1,0 +1,232 @@
+/* Webfont: Lato-Black */@font-face {
+    font-family: 'LatoWebBlack';
+    src: url(../fonts/Lato-Black.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Black.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Black.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Black.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-BlackItalic */@font-face {
+    font-family: 'LatoWebBlack';
+    src: url(../fonts/Lato-BlackItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-BlackItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-BlackItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-BlackItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-BlackItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Bold */@font-face {
+    font-family: 'LatoWebBold';
+    src: url(../fonts/Lato-Bold.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Bold.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Bold.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Bold.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-BoldItalic */@font-face {
+    font-family: 'LatoWebBold';
+    src: url(../fonts/Lato-BoldItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-BoldItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-BoldItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-BoldItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Hairline */@font-face {
+    font-family: 'LatoWebHairline';
+    src: url(../fonts/Lato-Hairline.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Hairline.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Hairline.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Hairline.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Hairline.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-HairlineItalic */@font-face {
+    font-family: 'LatoWebHairline';
+    src: url(../fonts/Lato-HairlineItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-HairlineItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-HairlineItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-HairlineItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-HairlineItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Heavy */@font-face {
+    font-family: 'LatoWebHeavy';
+    src: url(../fonts/Lato-Heavy.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Heavy.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Heavy.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Heavy.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-HeavyItalic */@font-face {
+    font-family: 'LatoWebHeavy';
+    src: url(../fonts/Lato-HeavyItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-HeavyItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-HeavyItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-HeavyItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-HeavyItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Italic */@font-face {
+    font-family: 'LatoWeb';
+    src: url(../fonts/Lato-Italic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Italic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Italic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Italic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Light */@font-face {
+    font-family: 'LatoWebLight';
+    src: url(../fonts/Lato-Light.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Light.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Light.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Light.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-LightItalic */@font-face {
+    font-family: 'LatoWebLight';
+    src: url(../fonts/Lato-LightItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-LightItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-LightItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-LightItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Medium */@font-face {
+    font-family: 'LatoWebMedium';
+    src: url(../fonts/Lato-Medium.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Medium.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Medium.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Medium.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-MediumItalic */@font-face {
+    font-family: 'LatoWebMedium';
+    src: url(../fonts/Lato-MediumItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-MediumItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-MediumItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-MediumItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Regular */@font-face {
+    font-family: 'LatoWeb';
+    src: url(../fonts/Lato-Regular.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Regular.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Regular.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Regular.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Semibold */@font-face {
+    font-family: 'LatoWebSemibold';
+    src: url(../fonts/Lato-Semibold.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Semibold.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Semibold.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Semibold.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-SemiboldItalic */@font-face {
+    font-family: 'LatoWebSemibold';
+    src: url(../fonts/Lato-SemiboldItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-SemiboldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-SemiboldItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-SemiboldItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-SemiboldItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Thin */@font-face {
+    font-family: 'LatoWebThin';
+    src: url(../fonts/Lato-Thin.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-Thin.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-Thin.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-Thin.ttf?__version=1659764531) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-ThinItalic */@font-face {
+    font-family: 'LatoWebThin';
+    src: url(../fonts/Lato-ThinItalic.eot?__version=1659764531); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-ThinItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(../fonts/Lato-ThinItalic.woff2?__version=1659764531) format('woff2'), /* Modern Browsers */
+         url(../fonts/Lato-ThinItalic.woff?__version=1659764531) format('woff'), /* Modern Browsers */
+         url(../fonts/Lato-ThinItalic.ttf?__version=1659764531) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+l¡/Þ”k           d÷EûÛ@       s    O^partitionKey=%28https%2Cuniv-orleans.fr%29,:https://auth-utilisateur.univ-orleans.fr:6082/login/css/latofonts.css strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAAAAgAAAAAAAAAAAAAAAAAAAAEAOQFmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAd8MIIHeDCCBWCgAwIBAgIQdwL7p0el96Luh0GoJ0AbiDANBgkqhkiG9w0BAQwFADBEMQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UEAxMRR0VBTlQgT1YgUlNBIENBIDQwHhcNMjMwNjI4MDAwMDAwWhcNMjQwNjI3MjM1OTU5WjB3MQswCQYDVQQGEwJGUjEcMBoGA1UECBMTQ2VudHJlLVZhbCBkZSBMb2lyZTEfMB0GA1UECgwWVW5pdmVyc2l0w6kgZCdPcmzDqWFuczEpMCcGA1UEAxMgYXV0aC11dGlsaXNhdGV1ci51bml2LW9ybGVhbnMuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDZOhtxvHU0vAly2SnIIi8jZHNlhUt5zvgl5slZ2eXQOULOXC/7NOJoB2yWRJKZpQP/0qrDYJYqdKsB35LGKnU7cQUxWQkQsy5WkSb5OziR+zfo1yS0sgApbsYnhAtkq2MohwLsZWT1+EP8djrogUZb+bfFSYpk2KgWdEks7y+IfjOEXzkozx2G4ErcA09grlglkukZXfM14/VncGAHZ10PovidT0Fr19//fdtUieWnrXjIwzmTfVP52RET/h9/U0pgf+djiFGWJ8nrMzIyRRCu3o05VI8Ib8gdZm5hRMlIz5EZkjnQeOLj0PwTonT82fnLQkJg3nQF5WCeZCu/mFrfAgMBAAGjggMxMIIDLTAfBgNVHSMEGDAWgBRvHTVJEGwy+lmgnryK6B+VvnF6DDAdBgNVHQ4EFgQUpzYt/KMMyjv7TynAI7OnphTSnB4wDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAk8wJTAjBggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQICMD8GA1UdHwQ4MDYwNKAyoDCGLmh0dHA6Ly9HRUFOVC5jcmwuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcmwwdQYIKwYBBQUHAQEEaTBnMDoGCCsGAQUFBzAChi5odHRwOi8vR0VBTlQuY3J0LnNlY3RpZ28uY29tL0dFQU5UT1ZSU0FDQTQuY3J0MCkGCCsGAQUFBzABhh1odHRwOi8vR0VBTlQub2NzcC5zZWN0aWdvLmNvbTArBgNVHREEJDAigiBhdXRoLXV0aWxpc2F0ZXVyLnVuaXYtb3JsZWFucy5mcjCCAXwGCisGAQQB1nkCBAIEggFsBIIBaAFmAHUAdv+IPwq2+5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQAAAGJAnjkOQAABAMARjBEAiBh9VRzDkeoVKzi/SExNuJ12RaVEwHb2hwD/0ddGD9f3QIgLyTS5t4M3bRcHs4v05qe98GN2rMw2LA5sYB+igv33t4AdgDatr9rP7W2Ip+bwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYkCeOSHAAAEAwBHMEUCIExE0UxbCsf83RK4A2082lLms03nrPjAO7cu7TzU55EBAiEA/JvN9YTJsjLzy9r/6135WTPzj3uvG7cMzPKwHAtmyaYAdQDuzdBk1dsazsVct520zROiModGfLzs3sNRSFlGcR+1mwAAAYkCeORlAAAEAwBGMEQCIFXWGBmdGwvOak3IRSWjYbpRK0QFm+0mpe2CIHUKh/VsAiBB/e7d5N+7T0XPKUDuqHnr/x4rwcq2+X+nlSK/raSzoTANBgkqhkiG9w0BAQwFAAOCAgEAHxjTT68WhcIHuOEU188al7+2WkZBDvsdCcmbaUJJC3hFMeX5bvtQXoyTqiVu/ww3ncIdqFMizxfzSWEXxidey7qlOXhinEfJ+j1mY5jdnKN5GgkGsJqb8M0pX31/X2J7YrsgpbOd17J3NlgTO0uAj5CArOeIjuZBDKHk84ux2VY8D1jtUlyVqf1bo2+nc/tjRcZcEabnzE3P3WANebdaosJv12r1lIKDBbnwdGbp+DRXj8VHVHWTWL0aeqB6cNPTVURUxdz3HC6O86Ac9SViS70Qf7mOTdNHd+6TRodSQ9GimHpvg7LLvwINWmBp3Wy3orVbvBy80UcRnwQ3yWiRGDoID4IUcliqMjulUAarexwHobfYmLZq58bRXIpwPiqdOKKhaZwBloCbf+B4y8NdPEsgs09tuK/PuUWegoGASjopMHXYnlkb4LHAMZdPFfQBI0oRSDoPiAneWpkkP/wriG7K5r/b9YNrmQv4ePWSIpNHsTVJEEWY11unXFadZL4pF0uSgepYRn/+KhNT8U2fYNjPt9X+gw3TbOGvP8vNiU19L2z1BFHBE1mhJZxuWuxgm0p/fdpidJhHAIh/6FwmI4CNai3h1ziNFbXcUNTGBmj+JmQ3h4o3wtgNSbh3/UkF8iZ8C/DVG/TZ8FT39hOBy4U344BgLE5sTzbAIeQyePPAFAADAAAAAAABAQAAAAAAAARub25lAAAAEFJTQS1QS0NTMS1TSEEyNTYAA2YKMiaRXE/7uyCJhaYy3wW9w5eaVCJM1YWJaWtuluqDAAAAAAAAB3wwggd4MIIFYKADAgECAhB3AvunR6X3ou6HQagnQBuIMA0GCSqGSIb3DQEBDAUAMEQxCzAJBgNVBAYTAk5MMRkwFwYDVQQKExBHRUFOVCBWZXJlbmlnaW5nMRowGAYDVQQDExFHRUFOVCBPViBSU0EgQ0EgNDAeFw0yMzA2MjgwMDAwMDBaFw0yNDA2MjcyMzU5NTlaMHcxCzAJBgNVBAYTAkZSMRwwGgYDVQQIExNDZW50cmUtVmFsIGRlIExvaXJlMR8wHQYDVQQKDBZVbml2ZXJzaXTDqSBkJ09ybMOpYW5zMSkwJwYDVQQDEyBhdXRoLXV0aWxpc2F0ZXVyLnVuaXYtb3JsZWFucy5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANk6G3G8dTS8CXLZKcgiLyNkc2WFS3nO+CXmyVnZ5dA5Qs5cL/s04mgHbJZEkpmlA//SqsNglip0qwHfksYqdTtxBTFZCRCzLlaRJvk7OJH7N+jXJLSyACluxieEC2SrYyiHAuxlZPX4Q/x2OuiBRlv5t8VJimTYqBZ0SSzvL4h+M4RfOSjPHYbgStwDT2CuWCWS6Rld8zXj9WdwYAdnXQ+i+J1PQWvX3/9921SJ5aeteMjDOZN9U/nZERP+H39TSmB/52OIUZYnyeszMjJFEK7ejTlUjwhvyB1mbmFEyUjPkRmSOdB44uPQ/BOidPzZ+ctCQmDedAXlYJ5kK7+YWt8CAwEAAaOCAzEwggMtMB8GA1UdIwQYMBaAFG8dNUkQbDL6WaCevIroH5W+cXoMMB0GA1UdDgQWBBSnNi38owzKO/tPKcAjs6emFNKcHjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSQYDVR0gBEIwQDA0BgsrBgEEAbIxAQICTzAlMCMGCCsGAQUFBwIBFhdodHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwBAgIwPwYDVR0fBDgwNjA0oDKgMIYuaHR0cDovL0dFQU5ULmNybC5zZWN0aWdvLmNvbS9HRUFOVE9WUlNBQ0E0LmNybDB1BggrBgEFBQcBAQRpMGcwOgYIKwYBBQUHMAKGLmh0dHA6Ly9HRUFOVC5jcnQuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcnQwKQYIKwYBBQUHMAGGHWh0dHA6Ly9HRUFOVC5vY3NwLnNlY3RpZ28uY29tMCsGA1UdEQQkMCKCIGF1dGgtdXRpbGlzYXRldXIudW5pdi1vcmxlYW5zLmZyMIIBfAYKKwYBBAHWeQIEAgSCAWwEggFoAWYAdQB2/4g/Crb7lVHCYcz1h7o0tKTNuyncaEIKn+ZnTFo6dAAAAYkCeOQ5AAAEAwBGMEQCIGH1VHMOR6hUrOL9ITE24nXZFpUTAdvaHAP/R10YP1/dAiAvJNLm3gzdtFwezi/Tmp73wY3aszDYsDmxgH6KC/fe3gB2ANq2v2s/tbYin5vCu1xr6HCRcWy7UYSFNL2kPTBI1/urAAABiQJ45IcAAAQDAEcwRQIgTETRTFsKx/zdErgDbTzaUuazTees+MA7ty7tPNTnkQECIQD8m831hMmyMvPL2v/rXflZM/OPe68btwzM8rAcC2bJpgB1AO7N0GTV2xrOxVy3nbTNE6Iyh0Z8vOzew1FIWUZxH7WbAAABiQJ45GUAAAQDAEYwRAIgVdYYGZ0bC85qTchFJaNhulErRAWb7Sal7YIgdQqH9WwCIEH97t3k37tPRc8pQO6oeev/HivByrb5f6eVIr+tpLOhMA0GCSqGSIb3DQEBDAUAA4ICAQAfGNNPrxaFwge44RTXzxqXv7ZaRkEO+x0JyZtpQkkLeEUx5flu+1BejJOqJW7/DDedwh2oUyLPF/NJYRfGJ17LuqU5eGKcR8n6PWZjmN2co3kaCQawmpvwzSlffX9fYntiuyCls53Xsnc2WBM7S4CPkICs54iO5kEMoeTzi7HZVjwPWO1SXJWp/Vujb6dz+2NFxlwRpufMTc/dYA15t1qiwm/XavWUgoMFufB0Zun4NFePxUdUdZNYvRp6oHpw09NVRFTF3PccLo7zoBz1JWJLvRB/uY5N00d37pNGh1JD0aKYem+Dssu/Ag1aYGndbLeitVu8HLzRRxGfBDfJaJEYOggPghRyWKoyO6VQBqt7HAeht9iYtmrnxtFcinA+Kp04oqFpnAGWgJt/4HjLw108SyCzT224r8+5RZ6CgYBKOikwddieWRvgscAxl08V9AEjShFIOg+ICd5amSQ//CuIbsrmv9v1g2uZC/h49ZIik0exNUkQRZjXW6dcVp1kvikXS5KB6lhGf/4qE1PxTZ9g2M+31f6DDdNs4a8/y82JTX0vbPUEUcETWaElnG5a7GCbSn992mJ0mEcAiH/oXCYjgI1qLeHXOI0VtdxQ1MYGaP4mZDeHijfC2A1JuHf9SQXyJnwL8NUb9NnwVPf2E4HLhTfjgGAsTmxPNsAh5DJ482YKMiaRXE/7uyCJhaYy3wW9w5eaVCJM1YWJaWtuluqDAAAAAAAABukwggblMIIEzaADAgECAhEA2kO9E5vSWLtN1hysxPPb4DANBgkqhkiG9w0BAQwFADCBiDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxFDASBgNVBAcTC0plcnNleSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsxLjAsBgNVBAMTJVVTRVJUcnVzdCBSU0EgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMjAwMjE4MDAwMDAwWhcNMzMwNTAxMjM1OTU5WjBEMQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UEAxMRR0VBTlQgT1YgUlNBIENBIDQwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCliGLVoSI+yD1kpEwDD1Cvwy2GyvpHbRVJ8V6HtODC0tCLpFJEs6HiivgQwb/W2HyWKO/vGcExVmRPKwWI+ZM+Is5+/P5DA7U3CO+Bj4muzt9KhUD9NCRfNzG7hOXdYeL6omYoslW78k64e53qY6ktaQhuE4NLM7EA0nbggY/H2Hg5cPLLr/fjZ4TpQ9cK0nwDN66ZMboN+/kpXHbiUIVMZTMdQH6P6DSVIqD9J/U7OAJqMlX16eZn/zjJ2HjzA+nq9tZ/UfQ7dF3cuGkxJWdOoVMsplJtB4tzH+X0M4pl8EIL2CFbGyBOpb2BDu/dPdoh9JpUL2ufBXE7RWOYN08U1t2jGeHTNjB/jmdXVBCClHBkn3fJZ52GnhyHVroCPCqz7C/iZnOYFKOi+1XSYrB34JBtJOhqURQ/hB4mrhR3PlY2Y0wjg5g/pyCueUnnRprQNk+UmqspA8Yvr0pBDPXZaDG+EK5VTvTLplYA+ikFrXKRuy22kvEANmt7lwfnveUi4sd2PHs2OlghdHHb5AlRGdfarHft5kjFhfPyCAz7BcfpENtTdXajkM/ruFc8dIBsD6nSiuMChymTaizEcqg1ITcsKM3HxZV3Gde+5Dby0p1orr2Sd+bdsHvGl1+w01M8f0SVyOxxZnGl5nkiKPyXKsIbXPS9Ja1IGyBKdTIb+wIDAQABo4IBizCCAYcwHwYDVR0jBBgwFoAUU3m/WqorSs9UgOHYm8Cd8rIDZsswHQYDVR0OBBYEFG8dNUkQbDL6WaCevIroH5W+cXoMMA4GA1UdDwEB/wQEAwIBhjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjA4BgNVHSAEMTAvMC0GBFUdIAAwJTAjBggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwUAYDVR0fBEkwRzBFoEOgQYY/aHR0cDovL2NybC51c2VydHJ1c3QuY29tL1VTRVJUcnVzdFJTQUNlcnRpZmljYXRpb25BdXRob3JpdHkuY3JsMHYGCCsGAQUFBwEBBGowaDA/BggrBgEFBQcwAoYzaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VTRVJUcnVzdFJTQUFkZFRydXN0Q0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2VydHJ1c3QuY29tMA0GCSqGSIb3DQEBDAUAA4ICAQBS2ULd7TGP/UEx8+F1CFRd4uNvTGnxQTbyTNYTnEPMYpt8aCetPZGXDmAsjH79w1Wtp3//4yulOmkyXGrn0CxdhlbfFFqyu+SMZ81He+3/VECXyIjfWUaEiDp18hfk3h6wuStB43weLIcofqSGbj3roiRVW2fHPkKBQ+oRifh5D7h54RKtYGECpdqK/sdG+mx3Ath6QCGeuUamKhn8IkhPY9NPF/4Yczpy5Sc2p1TN++tCADyS3X8BJfHah38z5zyeUmqsbPb2Wsm94k5IQxfRz+2zTZaGx8yGRhrpe6NRkua9HUSrTyvjz8RniX63kvjC3QNXxVo9uwQEXUQ4WnP9hLYfqZLBwVo0ludiqokci+bc8skeQWYSgtdFWtBd0JP7fCAF+BTqF4JXkJgHP9iSt1YRLu2KJPyxVQOpeZWVOxuJE2LIuzZuYRZYVSXvqNWIgmiDl+ieASo3eMsgZMb+ZeslPVTLKYhyhucgatvDBFXP+akVCjS8FgiLWTZOFWHQPHzwFsX1iI/zh13wWSfnBsToXFdgnbzup9FOCaF495w9zvdivO1ql1FywpUaQ6lpMgk/+X6UAdEtnGT91S3I33kb75s5JCqc4KlU9ptQaXYT84TIWukinCC7Yv9YlyW93qD5kD+JaQtIxymcVv65fpAGq8Pr5E3G6XUVoHmIdmYKMiaRXE/7uyCJhaYy3wW9w5eaVCJM1YWJaWtuluqDAAAAAAAABeIwggXeMIIDxqADAgECAhAB/W0w/KPKUagbvGQONQMtMA0GCSqGSIb3DQEBDAUAMIGIMQswCQYDVQQGEwJVUzETMBEGA1UECBMKTmV3IEplcnNleTEUMBIGA1UEBxMLSmVyc2V5IENpdHkxHjAcBgNVBAoTFVRoZSBVU0VSVFJVU1QgTmV0d29yazEuMCwGA1UEAxMlVVNFUlRydXN0IFJTQSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xMDAyMDEwMDAwMDBaFw0zODAxMTgyMzU5NTlaMIGIMQswCQYDVQQGEwJVUzETMBEGA1UECBMKTmV3IEplcnNleTEUMBIGA1UEBxMLSmVyc2V5IENpdHkxHjAcBgNVBAoTFVRoZSBVU0VSVFJVU1QgTmV0d29yazEuMCwGA1UEAxMlVVNFUlRydXN0IFJTQSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAIASZRc2DsPbCLPQrFcNdu3NJ9NMrVCDYeKqIE0JLWQJ3M6Jn8w9qez2z8Hc8dOx1ns3KBErR9o5xrw6GbRfpr19naNjQrZ28qk7K5H44m/Q7BYgkAk+4uh0yRi0kdRiZNt/owbxiBhqkCI8vP4T8IcUe/bkH47U5FHGEWdGCFHLhhRUP7wz/n5snP8WnRi9UY41pqdmyHJn2yFmsdSbeAPAUDrozPDcvJ5M/q8FljUfV1q3/875PbcstvZU3cjnEjpNrkyKt1yatLcgPcp/IjSufjtoZgFE5wFORlObM2D3lL5TN5BzQ/Myw1Pv26r+dE5px2uMYJPexMcM3+EyrsyTO1F4lWeL7j1W/gzQaQ8bD/MlJmszbfduR/pzQ+V+DqVmsSl8MoRjVYnEDcGTVDAZE6zTfTen6106bDVc20HXEtqpSQvf2ICKCZNijrVmzyWIzYS4sT+kOQ/ZAp7rEkyVfPNrBaleFoPMuGfi6BOdzFuC00yz7Vv/3uVzrCM7LQC/NVV0CUnYSVgaf5I25lGSDvMmfRxNF7zJ7EMm0L9BX0CpRET0medXh55QH1dUqD79dGMvsVBlCeZYQi5DGky08CVHWfoEHpPUJkZKUIGy3r54t/xnFeHJV4QeD2PW6WK61l9VLupcxigIBCU5uA4rqfJMlxwHPw1S9e3vL4IPAgMBAAGjQjBAMB0GA1UdDgQWBBRTeb9aqitKz1SA4dibwJ3ysgNmyzAOBgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQwFAAOCAgEAXNR8Dc/3AX1BmWUMc8VSn8v4z5kGfxvaQxWfngJVV5YU8VI8J4eUKO0fOgE3onb8U1DAhJvGa066jCFPoo5VYpHzaRXYvIjjxKoL/e+o6UtVKgYgbVV4KRnuXzBcSyQRVf8kmm5eKivuC02ff/cBOJQUlUMHCftgqe4cqxKMoJpep5hqWW2LPwj7yNFFrxgVZJASD3MoLsXiJE78WOzw9EX+IrPrL47S2UVhBcGXb6h2co+LjDavvw0FznGN5qZvH2ymcWLF2NCDcgzxZxGJDJwTTHI037zVcd+qcd3huWyMPBJdZdq9VxK2Q2v/5d5NZhFRz5mu7Be26HGRjN5J/t01caIVJ5Qcz2HjJrtvo2clIV3m3R0LLmgbO4Kv7INnhdSYUXSxuZmAif9/eBlceUpgLpJArkw3KizJx2LIDl33NlvK4CUlAbTdGgecdwA/0NzV7D3U+rs/zIXWb3+pLd+5Avf1l5q1NdrDZ7CHSqkoniOO/1wna+GwT/MH7gAu1FmHy1JBler0R9fuZEFVfI1ZApXdYp3Cue5aKHSEpZu3kMcMB9/1iTZ0MtYowbCwC+CcTMMc1vzjabVHRoEvooKr02NEcMSN/y0zuq2Pe7VwiK4+Gc9AKNj8yJC7XZki9VLmWMUfiDFD7ogd18aOPENqHacY3n09FvFi+cqQqP0AAAABAAAAAAEBAAAAAGN0bHNmbGFnczB4MDAwMDAwMDA6YXV0aC11dGlsaXNhdGV1ci51bml2LW9ybGVhbnMuZnI6NjA4Ml5wYXJ0aXRpb25LZXk9JTI4aHR0cHMlMkN1bml2LW9ybGVhbnMuZnIlMjkAAA== request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 05 Sep 2023 12:24:36 GMT
+Content-Type: text/css
+Content-Length: 11400
+Last-Modified: Sat, 06 Aug 2022 05:42:11 GMT
+Cache-Control: no-cache
+Accept-Ranges: bytes
+ original-response-headers Date: Tue, 05 Sep 2023 12:24:36 GMT
+Content-Type: text/css
+Content-Length: 11400
+Last-Modified: Sat, 06 Aug 2022 05:42:11 GMT
+Connection: keep-alive
+Cache-Control: no-cache
+Set-Cookie: Path=/; HttpOnly; Secure; SameSite=strict
+Accept-Ranges: bytes
+ ctid 5 uncompressed-len 0 net-response-time-onstart 8 net-response-time-onstop 8   ,ˆ

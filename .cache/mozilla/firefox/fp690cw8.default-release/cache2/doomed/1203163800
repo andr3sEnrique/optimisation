@@ -1,0 +1,1196 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; script-src resource: chrome:; connect-src https:; img-src https: data: blob: chrome:; style-src 'unsafe-inline';">
+    <meta name="color-scheme" content="light dark">
+    <title data-l10n-id="newtab-page-title"></title>
+    <link rel="icon" type="image/png" href="chrome://branding/content/icon32.png"/>
+    <link rel="localization" href="branding/brand.ftl" />
+    <link rel="localization" href="toolkit/branding/brandings.ftl" />
+    <link rel="localization" href="browser/newtab/newtab.ftl" />
+    <link rel="stylesheet" href="chrome://browser/content/contentSearchUI.css" />
+    <link rel="stylesheet" href="chrome://activity-stream/content/css/activity-stream.css" />
+  </head>
+  <!-- Cached: Tue, 05 Sep 2023 12:36:59 GMT -->
+  <body class="activity-stream">
+    <div id="header-asrouter-container" role="presentation"></div>
+    <div id="root">
+      <div><span><button class="icon icon-settings personalize-button" data-l10n-id="newtab-personalize-icon-label"></button><div class="customize-menu" role="dialog" data-l10n-id="newtab-personalize-dialog-label"><button class="close-button" data-l10n-id="newtab-custom-close-button"></button><div></div><div class="home-section"><div id="shortcuts-section" class="section"><label class="switch"><input type="checkbox" id="shortcuts-toggle" checked="" preference="feeds.topsites" aria-labelledby="custom-shortcuts-title" aria-describedby="custom-shortcuts-subtitle" eventSource="TOP_SITES"/><span class="slider" role="presentation"></span></label><div><h2 id="custom-shortcuts-title" class="title"><label for="shortcuts-toggle" data-l10n-id="newtab-custom-shortcuts-title"></label></h2><p id="custom-shortcuts-subtitle" class="subtitle" data-l10n-id="newtab-custom-shortcuts-subtitle"></p><div class="more-info-top-wrapper"><div class="more-information"><select id="row-selector" class="selector" name="row-count" preference="topSitesRows" aria-labelledby="custom-shortcuts-title"><option selected="" value="1" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 1}"></option><option value="2" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 2}"></option><option value="3" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 3}"></option><option value="4" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 4}"></option></select><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-shortcuts" class="sponsored-checkbox" checked="" preference="showSponsoredTopSites" eventSource="SPONSORED_TOP_SITES"/><label class="sponsored" for="sponsored-shortcuts" data-l10n-id="newtab-custom-sponsored-sites"></label></div></div></div></div></div><div id="pocket-section" class="section"><label class="switch"><input type="checkbox" id="pocket-toggle" checked="" preference="feeds.section.topstories" aria-labelledby="custom-pocket-title" aria-describedby="custom-pocket-subtitle" eventSource="TOP_STORIES"/><span class="slider" role="presentation"></span></label><div><h2 id="custom-pocket-title" class="title"><label for="pocket-toggle" data-l10n-id="newtab-custom-pocket-title"></label></h2><p id="custom-pocket-subtitle" class="subtitle" data-l10n-id="newtab-custom-pocket-subtitle"></p><div class="more-info-pocket-wrapper"><div class="more-information"><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-pocket" class="sponsored-checkbox" checked="" preference="showSponsored" eventSource="POCKET_SPOCS"/><label class="sponsored" for="sponsored-pocket" data-l10n-id="newtab-custom-pocket-sponsored"></label></div></div></div></div></div><div id="recent-section" class="section"><label class="switch"><input type="checkbox" id="highlights-toggle" preference="feeds.section.highlights" eventSource="HIGHLIGHTS" aria-labelledby="custom-recent-title" aria-describedby="custom-recent-subtitle"/><span class="slider" role="presentation"></span></label><div><h2 id="custom-recent-title" class="title"><label for="highlights-toggle" data-l10n-id="newtab-custom-recent-title"></label></h2><p id="custom-recent-subtitle" class="subtitle" data-l10n-id="newtab-custom-recent-subtitle"></p></div></div><span class="divider" role="separator"></span><div><button id="settings-link" class="external-link" data-l10n-id="newtab-custom-settings"></button></div></div></div></span><div class="outer-wrapper ds-outer-wrapper-search-alignment ds-outer-wrapper-breakpoint-override visible-logo"><main class=""><div class="non-collapsible-section"><div class="search-wrapper"><div class="logo-and-wordmark"><div class="logo"></div><div class="wordmark"></div></div><div class="search-inner-wrapper"><button class="search-handoff-button" data-l10n-id="newtab-search-box-handoff-input-no-engine" tabindex="-1"><div class="fake-textbox" data-l10n-id="newtab-search-box-handoff-text-no-engine"></div><input type="search" class="fake-editable" tabindex="-1" aria-hidden="true"/><div class="fake-caret"></div></button></div></div></div><div class="body-wrapper on"><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div class="ds-top-sites"><section class="collapsible-section top-sites" data-section-id="topsites"><div class="section-top-bar"><h3 class="section-title-container " style="visibility:hidden"><span class="section-title"><span data-l10n-id="newtab-section-header-topsites"></span></span><span class="learn-more-link-wrapper"></span></h3></div><div><ul class="top-sites-list"><li class="top-site-outer placeholder "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><button aria-haspopup="dialog" class="context-menu-button edit-button icon" data-l10n-id="newtab-menu-topsites-placeholder-tooltip"></button><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer placeholder "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><button aria-haspopup="dialog" class="context-menu-button edit-button icon" data-l10n-id="newtab-menu-topsites-placeholder-tooltip"></button><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://celene.univ-orleans.fr/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper letter-fallback" data-fallback="c" style="background-color:#FF2A8A"><div class=""></div></div></div><div class="title"><span dir="auto">celene.univ-orleans<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;celene.univ-orleans&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.youtube.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="Y"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png)"></div></div></div><div class="title"><span dir="auto">YouTube<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;YouTube&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.facebook.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="F"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Facebook<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Facebook&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.wikipedia.org/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="W"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png)"></div></div></div><div class="title"><span dir="auto">Wikipedia<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Wikipedia&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://www.leboncoin.fr/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="l"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/leboncoin-fr@2x.png)"></div></div></div><div class="title"><span dir="auto">leboncoin<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;leboncoin&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://twitter.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="T"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Twitter<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Twitter&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li></ul><div class="edit-topsites-wrapper"></div></div></section></div></div></div></div><style data-styles="[[null]]"></style></div><section class="collapsible-section ds-layout" data-section-id="topstories"><div class="section-top-bar"><h3 class="section-title-container "><span class="section-title"><span data-l10n-args="{&quot;provider&quot;:&quot;Pocket&quot;}" data-l10n-id="newtab-section-header-pocket"></span></span><span class="learn-more-link-wrapper"><span class="learn-more-link"><a href="https://getpocket.com/firefox/new_tab_learn_more" data-l10n-id="newtab-pocket-learn-more"></a></span></span></h3></div><div><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div><div class="ds-card-grid    ds-card-grid-include-descriptions "><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://madame.lefigaro.fr/societe/actu/eurosummer-des-americaines-racontent-leurs-desillusions-de-vacances-en-france-20230901?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/a334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fa334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;madame.lefigaro.fr&quot;,&quot;timeToRead&quot;:4}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="#EuroSummer : des Américaines racontent leurs désillusions de vacances en France" class="title clamp">#EuroSummer : des Américaines racontent leurs désillusions de vacances en France</header><p class="excerpt clamp">Depuis début juillet, un nouveau hashtag gangrène TikTok. Utilisé près de 700.000 fois sur le réseau social chinois, il témoigne de la désillusion des touristes, Américaines pour la plupart, voyageant en Europe.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;#EuroSummer : des Américaines racontent leurs désillusions de vacances en France&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.slate.fr/story/252396/covid-rentree-nouveaux-variants-eris-augmentation-cas-epidemie?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;Slate.fr&quot;,&quot;timeToRead&quot;:11}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Covid-19: avec l&#x27;arrivée du variant Eris, le retour d&#x27;un protocole sanitaire?" class="title clamp">Covid-19: avec l&#x27;arrivée du variant Eris, le retour d&#x27;un protocole sanitaire?</header><p class="excerpt clamp">Le début de l&#x27;été a été marqué par une sorte d&#x27;insouciance sur le front du Covid. Mais, depuis début août, le nombre de cas apparaît en augmentation.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Covid-19: avec l&#x27;arrivée du variant Eris, le retour d&#x27;un protocole sanitaire?&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.radiofrance.fr/franceinter/patisserie-les-cinq-conseils-du-chef-patissier-de-l-hotel-de-crillon-pour-reussir-son-flan-3298429?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/45005902-fd76-4940-92a3-0da413ac2206.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F45005902-fd76-4940-92a3-0da413ac2206.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F45005902-fd76-4940-92a3-0da413ac2206.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F45005902-fd76-4940-92a3-0da413ac2206.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F45005902-fd76-4940-92a3-0da413ac2206.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F45005902-fd76-4940-92a3-0da413ac2206.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F45005902-fd76-4940-92a3-0da413ac2206.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;radiofrance.fr&quot;,&quot;timeToRead&quot;:4}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Pâtisserie : les cinq conseils du chef pâtissier de l&#x27;Hôtel de Crillon pour réussir son flan" class="title clamp">Pâtisserie : les cinq conseils du chef pâtissier de l&#x27;Hôtel de Crillon pour réussir son flan</header><p class="excerpt clamp">Il a le flan en poupe. Au rayon pâtisserie, le flan s&#x27;offre un retour en grâce. Longtemps considéré comme un coupe-faim ou un flamby gélatineux, ce dessert, l&#x27;un des plus anciens de France, a gagné ses lettres de noblesse.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Pâtisserie : les cinq conseils du chef pâtissier de l&#x27;Hôtel de Crillon pour réussir son flan&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.lefigaro.fr/actualite-france/sa-demande-de-naturalisation-est-refusee-car-il-ne-sait-pas-qui-est-edith-cresson-20230902?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d58ca43f-cb03-45e2-ba78-412188682d1c.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd58ca43f-cb03-45e2-ba78-412188682d1c.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd58ca43f-cb03-45e2-ba78-412188682d1c.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd58ca43f-cb03-45e2-ba78-412188682d1c.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd58ca43f-cb03-45e2-ba78-412188682d1c.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd58ca43f-cb03-45e2-ba78-412188682d1c.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd58ca43f-cb03-45e2-ba78-412188682d1c.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;Le Figaro&quot;,&quot;timeToRead&quot;:4}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Sa demande de naturalisation est refusée car il ne sait pas qui est Édith Cresson" class="title clamp">Sa demande de naturalisation est refusée car il ne sait pas qui est Édith Cresson</header><p class="excerpt clamp">Un jeune homme albanais de 25 ans, résidant en France depuis 12 ans, s’est vu refuser la naturalisation pour des motifs flous, selon Le Parisien. Il semblait être le candidat idéal.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Sa demande de naturalisation est refusée car il ne sait pas qui est Édith Cresson&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.20minutes.fr/paris/4051172-20230903-paris-vont-devenir-trottinettes-electriques?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;20 Minutes&quot;,&quot;timeToRead&quot;:2}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Trottinettes à Paris : Que vont-elles devenir ?" class="title clamp">Trottinettes à Paris : Que vont-elles devenir ?</header><p class="excerpt clamp">Vous aimiez bien louer une trottinette électrique pour vos déplacements à Paris ? Vous devrez maintenant changer vos habitudes. Depuis le 1er septembre, les 15.000 trottinettes électriques des opérateurs privés Lime, Dott et Tier ont été retirées des trottoirs de la capitale.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Trottinettes à Paris : Que vont-elles devenir ?&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.futura-sciences.com/sante/questions-reponses/corps-humain-sont-symptomes-systeme-immunitaire-affaibli-19283/?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/9917e676-1761-4087-87a3-be34bfd2ab02.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9917e676-1761-4087-87a3-be34bfd2ab02.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9917e676-1761-4087-87a3-be34bfd2ab02.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9917e676-1761-4087-87a3-be34bfd2ab02.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9917e676-1761-4087-87a3-be34bfd2ab02.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9917e676-1761-4087-87a3-be34bfd2ab02.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F9917e676-1761-4087-87a3-be34bfd2ab02.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;Futura-Sciences&quot;,&quot;timeToRead&quot;:2}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Quels sont les symptômes d&#x27;un système immunitaire affaibli ?" class="title clamp">Quels sont les symptômes d&#x27;un système immunitaire affaibli ?</header><p class="excerpt clamp">Lorsque notre système immunitaire fonctionne à son plein potentiel, il est notre bouclier naturel contre les infections et les maladies. Cependant, il peut arriver que ce mécanisme de défense vital soit affaibli, ce qui peut rendre notre corps plus vulnérable aux envahisseurs pathogènes. </p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Quels sont les symptômes d&#x27;un système immunitaire affaibli ?&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.beauxarts.com/grand-format/les-grands-peintres-etaient-ils-tres-riches/?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/01e124a2-9c69-4278-92a1-8298caeff541.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F01e124a2-9c69-4278-92a1-8298caeff541.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F01e124a2-9c69-4278-92a1-8298caeff541.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F01e124a2-9c69-4278-92a1-8298caeff541.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F01e124a2-9c69-4278-92a1-8298caeff541.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F01e124a2-9c69-4278-92a1-8298caeff541.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F01e124a2-9c69-4278-92a1-8298caeff541.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp">beauxarts.com</p><header title="Les grands peintres étaient-ils très riches ?" class="title clamp">Les grands peintres étaient-ils très riches ?</header><p class="excerpt clamp">À partir de la Renaissance, les puissants des cours d’Europe vont s’arracher les meilleurs peintres. La concurrence est rude pour décrocher le plus beau contrat ! Mais combien gagnaient vraiment des maîtres comme Titien, Véronèse et plus tard Rubens ? Chaque jour, Beaux Arts répond à toutes les questions que vous vous posez sur l’art.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Les grands peintres étaient-ils très riches ?&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.la-croix.com/Sciences-et-ethique/Sante-quelles-sont-prerogatives-pharmacien-2023-09-01-1201280964?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/285269b5-65f3-4808-9275-b4bcc8025988.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F285269b5-65f3-4808-9275-b4bcc8025988.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F285269b5-65f3-4808-9275-b4bcc8025988.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F285269b5-65f3-4808-9275-b4bcc8025988.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F285269b5-65f3-4808-9275-b4bcc8025988.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F285269b5-65f3-4808-9275-b4bcc8025988.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F285269b5-65f3-4808-9275-b4bcc8025988.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;la-croix.com&quot;,&quot;timeToRead&quot;:2}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Santé : quelles sont les prérogatives du pharmacien ?" class="title clamp">Santé : quelles sont les prérogatives du pharmacien ?</header><p class="excerpt clamp">La première ministre a autorisé jeudi 31 août les pharmaciens à prescrire des antibiotiques pour les cystites et les angines, après la réalisation d’un test. Pour favoriser l’accès aux actes de soin courants, les prérogatives de ces professionnels de santé se sont élargies ces dernières années.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Santé : quelles sont les prérogatives du pharmacien ?&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.slate.fr/story/252426/generation-z-jeunes-videos-reseaux-sociaux-pieds-sandales?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;Slate.fr&quot;,&quot;timeToRead&quot;:3}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Pourquoi la génération Z ne montre-t-elle jamais ses pieds?" class="title clamp">Pourquoi la génération Z ne montre-t-elle jamais ses pieds?</header><p class="excerpt clamp">Porter des sandales sans chaussettes, c&#x27;est un truc de boomer.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Pourquoi la génération Z ne montre-t-elle jamais ses pieds?&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.neonmag.fr/?authId=d4c925c1b738347bf115527ea9294384&amp;redirectUri=%2Fsante-psycho%2Frelations-toxiques-pourquoi-ignorons-nous-les-red-flags-une-psychotherapeute-devoile-5-raisons-561323&amp;utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp">neonmag.fr</p><header title="Relations toxiques : pourquoi ignorons-nous les &quot;red flags&quot; ? Une psychothérapeute dévoile 5 raisons" class="title clamp">Relations toxiques : pourquoi ignorons-nous les &quot;red flags&quot; ? Une psychothérapeute dévoile 5 raisons</header><p class="excerpt clamp">&quot;Attention, red flag !&quot;. Il arrive que notre cerveau nous dise cette petite phrase au début d&#x27;une nouvelle relation... sans que nous ne l&#x27;écoutions forcément. Malgré des signaux d&#x27;alerte, certain·e·s décident en effet de se lancer tête baissée dans une histoire pourtant... vouée à l&#x27;échec. Voici pourquoi, selon une experte.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Relations toxiques : pourquoi ignorons-nous les \&quot;red flags\&quot; ? Une psychothérapeute dévoile 5 raisons&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.geo.fr/?authId=d66a930e7b79860e8efd7301b034d86a&amp;redirectUri=%2Fenvironnement%2Fchangement-climatique-un-milliard-de-personnes-pourraient-mourir-dans-le-siecle-a-venir-regle-1000-tonnes-216406&amp;utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp">geo.fr</p><header title="Changement climatique : un milliard de personnes pourraient mourir dans le siècle à venir" class="title clamp">Changement climatique : un milliard de personnes pourraient mourir dans le siècle à venir</header><p class="excerpt clamp">Selon une synthèse d&#x27;articles récents sur le taux de mortalité causé par le changement climatique, un milliard de personnes pourraient disparaître au XXIe siècle. Mais le lien entre les décès et le changement climatique n&#x27;est pas toujours aisé à quantifier.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Changement climatique : un milliard de personnes pourraient mourir dans le siècle à venir&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://korii.slate.fr/tech/hackers-chinois-fausses-applications-signal-plus-messenger-telegram-flygram-stores-google-samsung-malwares-ouighours?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;korii.slate.fr&quot;,&quot;timeToRead&quot;:2}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Des hackers chinois ont mis en ligne de fausses applications Signal et Telegram sur les stores de Google et Samsung" class="title clamp">Des hackers chinois ont mis en ligne de fausses applications Signal et Telegram sur les stores de Google et Samsung</header><p class="excerpt clamp">Ils avaient déjà ciblé la communauté ouïghoure.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Des hackers chinois ont mis en ligne de fausses applications Signal et Telegram sur les stores de Google et Samsung&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://theconversation.com/pourquoi-tester-les-medicaments-sur-des-animaux-males-est-problematique-pour-la-sante-des-femmes-212727?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;The Conversation&quot;,&quot;timeToRead&quot;:6}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Pourquoi tester les médicaments sur des animaux mâles est problématique pour la santé des femmes" class="title clamp">Pourquoi tester les médicaments sur des animaux mâles est problématique pour la santé des femmes</header><p class="excerpt clamp">Les scientifiques qui s’intéressent à certains problèmes de santé humaine identifient d’ailleurs de plus en plus de différences liées au sexe.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Pourquoi tester les médicaments sur des animaux mâles est problématique pour la santé des femmes&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.midilibre.fr/2023/09/04/retour-des-mathematiques-lutte-contre-le-harcelement-interdiction-de-labaya-ce-qui-change-pour-cette-rentree-2023-11424289.php?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/c8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fc8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fc8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fc8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fc8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fc8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fc8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;midilibre.fr&quot;,&quot;timeToRead&quot;:3}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Retour des mathématiques, lutte contre le harcèlement, interdiction de l&#x27;abaya... ce qui change pour cette rentrée 2023" class="title clamp">Retour des mathématiques, lutte contre le harcèlement, interdiction de l&#x27;abaya... ce qui change pour cette rentrée 2023</header><p class="excerpt clamp">Aujourd&#x27;hui près de 11 997 900 élèves vont faire leur rentrée en France. L&#x27;occasion de faire le point sur les principaux changements prévus pour cette année 2023-2024. Afin de &quot;rendre le métier de professeur plus attractif&quot; le gouvernement a annoncé plusieurs mesures.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Retour des mathématiques, lutte contre le harcèlement, interdiction de l&#x27;abaya... ce qui change pour cette rentrée 2023&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.huffingtonpost.fr/life/article/zones-bleues-quels-sont-ces-endroits-du-monde-ou-l-on-vit-plus-longtemps-et-en-meilleure-sante-clx1_222355.html?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;Le HuffPost&quot;,&quot;timeToRead&quot;:3}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="« Zones bleues » : quels sont ces endroits du monde où l’on vit plus longtemps, et en meilleure santé ?" class="title clamp">« Zones bleues » : quels sont ces endroits du monde où l’on vit plus longtemps, et en meilleure santé ?</header><p class="excerpt clamp">Imaginez un endroit où l’on vivrait longtemps, en bonne santé, sans avoir spécialement besoin de faire attention à sa ligne ou de faire du sport. Une utopie ? Pas si sûr.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;« Zones bleues » : quels sont ces endroits du monde où l’on vit plus longtemps, et en meilleure santé ?&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.bfmtv.com/tech/astuces/rentree-scolaire-2023-comment-securiser-le-premier-smartphone-de-votre-enfant_AN-202309030024.html?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8c8e97da-425b-469a-8bb9-67555e018de0.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8c8e97da-425b-469a-8bb9-67555e018de0.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8c8e97da-425b-469a-8bb9-67555e018de0.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8c8e97da-425b-469a-8bb9-67555e018de0.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8c8e97da-425b-469a-8bb9-67555e018de0.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8c8e97da-425b-469a-8bb9-67555e018de0.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F8c8e97da-425b-469a-8bb9-67555e018de0.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;BFMTV&quot;,&quot;timeToRead&quot;:3}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Rentrée scolaire 2023: comment sécuriser le premier smartphone de votre enfant" class="title clamp">Rentrée scolaire 2023: comment sécuriser le premier smartphone de votre enfant</header><p class="excerpt clamp">Avant de remettre son premier smartphone à votre enfant, il convient d&#x27;adopter certaines précautions pour s&#x27;assurer qu&#x27;il l&#x27;utilise de manière sûre et équilibrée. A l&#x27;approche de la rentrée scolaire, vous avez peut être décidé d&#x27;offrir à votre enfant son premier smartphone.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Rentrée scolaire 2023: comment sécuriser le premier smartphone de votre enfant&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.elle.fr/Loisirs/Musique/News/Taylor-Swift-devient-la-premiere-femme-avec-100-millions-d-auditeurs-mensuels-sur-Spotify-4146728?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/91adf974-1f31-4770-8224-21a94f8d4f49.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F91adf974-1f31-4770-8224-21a94f8d4f49.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F91adf974-1f31-4770-8224-21a94f8d4f49.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F91adf974-1f31-4770-8224-21a94f8d4f49.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F91adf974-1f31-4770-8224-21a94f8d4f49.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F91adf974-1f31-4770-8224-21a94f8d4f49.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F91adf974-1f31-4770-8224-21a94f8d4f49.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;elle.fr&quot;,&quot;timeToRead&quot;:2}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Taylor Swift devient la première femme avec 100 millions d’auditeurs mensuels sur Spotify" class="title clamp">Taylor Swift devient la première femme avec 100 millions d’auditeurs mensuels sur Spotify</header><p class="excerpt clamp">Qui dit Taylor Swift dit « records ». Entre albums classés, nombre d’auditeurs et tournée mondiale, la chanteuse continue de s’imposer. Dernier record en date : 100 millions d’auditeurs mensuels sur Spotify.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Taylor Swift devient la première femme avec 100 millions d’auditeurs mensuels sur Spotify&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.ouest-france.fr/sante/sante-comment-la-plateforme-de-videos-youtube-sequipe-pour-contrer-la-desinformation-medicale-8c914c68-41b5-11ee-ae6d-069db0645c1b?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/978ea22c-6b22-449d-b522-e4d3409a320e.png" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F978ea22c-6b22-449d-b522-e4d3409a320e.png 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F978ea22c-6b22-449d-b522-e4d3409a320e.png 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F978ea22c-6b22-449d-b522-e4d3409a320e.png 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F978ea22c-6b22-449d-b522-e4d3409a320e.png 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F978ea22c-6b22-449d-b522-e4d3409a320e.png 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F978ea22c-6b22-449d-b522-e4d3409a320e.png 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp">Ouest-France</p><header title="YouTube renforce la lutte contre la désinformation médicale" class="title clamp">YouTube renforce la lutte contre la désinformation médicale</header><p class="excerpt clamp">Après la période de Covid et son lot de désinformation virale sur les vaccins ou les masques, YouTube met à jour son « règlement santé » pour supprimer les contenus dangereux dans ce domaine sensible où les charlatans savent profiter de la détresse des patients. La plateforme réfléchit aussi à une structure de contrôle des contenus à plus long terme.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;YouTube renforce la lutte contre la désinformation médicale&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.radiofrance.fr/franceculture/podcasts/sous-les-radars/rentree-ce-que-nos-vacances-disent-de-nous-4671212?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/b9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp">radiofrance.fr</p><header title="Rentrée : ce que nos vacances disent de nous" class="title clamp">Rentrée : ce que nos vacances disent de nous</header><p class="excerpt clamp">La rentrée est l&#x27;occasion de s&#x27;interroger sur le sens du temps des vacances, qui s&#x27;achève : repos, coupure avec le rythme de l&#x27;année, pause nécessaire au resserrement des liens personnels ? Comment évoluent ces conceptions, y compris pour les 40 % de Français qui ne partent pas ?</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Rentrée : ce que nos vacances disent de nous&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://www.femina.fr/article/5-sites-ou-grandes-enseignes-pour-revendre-vos-livres-facilement?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;femina.fr&quot;,&quot;timeToRead&quot;:4}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="5 sites ou grandes enseignes pour revendre vos livres facilement" class="title clamp">5 sites ou grandes enseignes pour revendre vos livres facilement</header><p class="excerpt clamp">Vous aimez lire mais vous n’avez plus de place sur vos étagères ? Pensez à la revente. Romans, bande-dessinées… les livres d’occasion ont plus que jamais la cote et il ne manque pas de solutions pour mettre en vente vos ouvrages, rapidement et sans risque.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;5 sites ou grandes enseignes pour revendre vos livres facilement&quot;}" class="context-menu-button icon"></button></div></div></div></div><div class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3"><a href="https://leparticulier.lefigaro.fr/jcms/c_119373/impots-locaux/taxe-fonciere-jusqu-a-5-ans-d-exoneration-en-cas-de-travaux-d-economie-d-energie-20230831?utm_source=pocket-newtab-fr-fr" class="ds-card-link"><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/bd4efb12-9796-4d44-b571-2a85251acc3b.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fbd4efb12-9796-4d44-b571-2a85251acc3b.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fbd4efb12-9796-4d44-b571-2a85251acc3b.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fbd4efb12-9796-4d44-b571-2a85251acc3b.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fbd4efb12-9796-4d44-b571-2a85251acc3b.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fbd4efb12-9796-4d44-b571-2a85251acc3b.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fbd4efb12-9796-4d44-b571-2a85251acc3b.jpeg 404w"/></picture></div><div class="meta"><div class="info-wrap"><p class="source clamp time-to-read"><span data-l10n-args="{&quot;source&quot;:&quot;leparticulier.lefigaro.fr&quot;,&quot;timeToRead&quot;:3}" data-l10n-id="newtab-label-source-read-time"></span></p><header title="Taxe foncière : jusqu&#x27;à 5 ans d&#x27;exonération en cas de travaux d&#x27;économie d&#x27;énergie" class="title clamp">Taxe foncière : jusqu&#x27;à 5 ans d&#x27;exonération en cas de travaux d&#x27;économie d&#x27;énergie</header><p class="excerpt clamp">Dans certaines communes, les propriétaires ayant acheté des équipements ou réalisé des travaux en vue d&#x27;économies d&#x27;énergie peuvent bénéficier d&#x27;une réduction, voire d&#x27;une exonération de la taxe foncière. À condition de remplir plusieurs conditions.</p></div></div><div class="impression-observer"></div></a><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Taxe foncière : jusqu&#x27;à 5 ans d&#x27;exonération en cas de travaux d&#x27;économie d&#x27;énergie&quot;}" class="context-menu-button icon"></button></div></div></div></div></div></div></div><div><div class="ds-navigation ds-navigation-left-align "><a href="https://www.mozilla.org/privacy/firefox/#suggest-relevant-content" class="ds-navigation-privacy"><span data-l10n-id="newtab-section-menu-privacy-notice"></span></a></div></div></div></div><style data-styles="[[null,{&quot;.ds-navigation&quot;:&quot;margin-top: -10px;&quot;}]]"></style></div></div></section><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div></div></div></div><style data-styles="[[null]]"></style></div></div></main></div></div>
+    </div>
+    <div id="footer-asrouter-container" role="presentation"></div>
+    <script src="about:home?jscache"></script>
+  </body>
+</html>
+window.__FROM_STARTUP_CACHE__ = true;
+window.__STARTUP_STATE__ = {
+	"TopSites": {
+		"initialized": true,
+		"rows": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.fr/?tag=admarketpla00-21&ref=pd_sl_9c71bfab4b5f21313999ed73a57d06a76d000971ff9fc36504ff436f&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.sfo1.ap01.net/ctp?version=16.0.0&key=1693913867400800001.1&ci=1693913867770.12791&ctag=pd_sl_9c71bfab4b5f21313999ed73a57d06a76d000971ff9fc36504ff436f",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4QqZ1ClZ1pHr4pbW1pbWfpbX7ReNxR3UIG8zInwYIFIVs9eYiGINHrwkiFXwxYIZjF8XgClWfC2X7R4dHQ8zJnErj%3DcO7R4dHQfz4Z2Z4CxnHG3Z5FwqgCfX1p8d4Cxr1BINI9HuiF2z4Z2Z4CxnHmcux%3DcvImauiF2zfQlX4px%2B7ncqIr7VjGbuiF2zfCfr4CbY4Zfnj9wWIBdvIpkY7R4TJr2uJREuHnEYgClnHr7wHG3vjnDuiF2z4Z2r7ReTHF4wJFEUjtdvIpkXfpbr",
+				"sponsored_tile_id": 74357,
+				"partner": "amp",
+				"favicon": "https://contile-images.services.mozilla.com/obgoOYObjIFea_bXuT6L4LbBJ8j425AD87S1HMD3BWg.9991.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://fr.hotels.com/?locale=fr_FR&pos=HCOM_FR&siteid=300000010&rffrid=sem.hcom.FR.AMP.003.00.03.s.s.kwrd=device.creative.15480311.210327.adposition.targetid.loc_physical_ms.loc_interest_ms.keyword.1693913867400800001.aw.ds&PSRC=_psrc&semcid=HCOM-FR.UB.ADMARKETPLACE.GT-C-FR.HOTEL&SEMDTL=a1210327.b115480311.g1targetid.l1.e1device.m1gclid.r1_expediakwid.c1_expediaadid.j1loc_physical_ms.k1loc_interest_ms.d1creative.h1matchtype.i1feeditemid.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&mfadid=adm",
+				"hostname": "fr.hotels",
+				"sendAttributionRequest": false,
+				"label": "Hotels.com",
+				"show_sponsored_label": true,
+				"sponsored_position": 2,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=16.0.0&key=1693913867400800001.2&ci=1693913867770.12791&ctag=1693913867400800001",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4QqZ1ClZ1pHr4pbW1pbWfpbX7ReNxR3UIG8zInwYIFIVs9eYiGINHrwkiFXwxYIZjF8XgClWfC2X7R4dHQ8zJnErj%3DcO7R4dHQfz4Z2WfZLnHG3Z5FwqgCfX1p8d4Cxr1BINI9HuiF2z4Z2WfZLnHmcux%3DcvImauiF2zfQlWfZ8r7ncqIr7VjGbuiF2zfCDk1pbZfClnj9wWIBdvIpkY7R4TJr2uJREuHnEYgC8nHr7wHG3vjnDuiF2z4pHZfBIWJ%3DcQIFdwJR2uiF2zfCbW4Wyy",
+				"sponsored_tile_id": 74038,
+				"partner": "amp",
+				"favicon": "https://contile-images.services.mozilla.com/NFID2PaNJaR3mcE18BFgudhY6mkekkTZOy7CcB27QzE.8480.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 234,
+				"guid": "lycePEsSwYjz",
+				"lastVisitDate": 1693916976513,
+				"title": "CELENE",
+				"url": "https://celene.univ-orleans.fr/",
+				"type": "history",
+				"screenshot": null,
+				"hostname": "celene.univ-orleans",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.leboncoin.fr/",
+				"hostname": "leboncoin",
+				"sendAttributionRequest": false,
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/leboncoin-fr@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/leboncoin-fr.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://twitter.com/",
+				"hostname": "twitter",
+				"sendAttributionRequest": false,
+				"label": "Twitter",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/twitter-com.ico",
+				"typedBonus": true
+			}
+		],
+		"editForm": null,
+		"showSearchShortcutsForm": false,
+		"searchShortcuts": [
+			{
+				"keyword": "@google",
+				"shortURL": "google",
+				"url": "https://google.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/google-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/google-com.ico"
+			},
+			{
+				"keyword": "@bing",
+				"shortURL": "bing",
+				"url": "https://bing.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/bing-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/bing-com.ico"
+			},
+			{
+				"keyword": "@duckduckgo",
+				"shortURL": "duckduckgo",
+				"url": "https://duckduckgo.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/duckduckgo-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/duckduckgo-com.ico"
+			},
+			{
+				"keyword": "@ebay",
+				"shortURL": "ebay",
+				"url": "https://ebay.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/ebay@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/ebay.ico"
+			},
+			{
+				"keyword": "@wikipedia",
+				"shortURL": "wikipedia",
+				"url": "https://wikipedia.org",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico"
+			}
+		],
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"App": {
+		"initialized": true,
+		"locale": "fr",
+		"isForStartupCache": true,
+		"customizeMenuVisible": false,
+		"links": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.fr/?tag=admarketpla00-21&ref=pd_sl_9c71bfab4b5f21313999ed73a57d06a76d000971ff9fc36504ff436f&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.sfo1.ap01.net/ctp?version=16.0.0&key=1693913867400800001.1&ci=1693913867770.12791&ctag=pd_sl_9c71bfab4b5f21313999ed73a57d06a76d000971ff9fc36504ff436f",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4QqZ1ClZ1pHr4pbW1pbWfpbX7ReNxR3UIG8zInwYIFIVs9eYiGINHrwkiFXwxYIZjF8XgClWfC2X7R4dHQ8zJnErj%3DcO7R4dHQfz4Z2Z4CxnHG3Z5FwqgCfX1p8d4Cxr1BINI9HuiF2z4Z2Z4CxnHmcux%3DcvImauiF2zfQlX4px%2B7ncqIr7VjGbuiF2zfCfr4CbY4Zfnj9wWIBdvIpkY7R4TJr2uJREuHnEYgClnHr7wHG3vjnDuiF2z4Z2r7ReTHF4wJFEUjtdvIpkXfpbr",
+				"sponsored_tile_id": 74357,
+				"partner": "amp",
+				"favicon": "https://contile-images.services.mozilla.com/obgoOYObjIFea_bXuT6L4LbBJ8j425AD87S1HMD3BWg.9991.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://fr.hotels.com/?locale=fr_FR&pos=HCOM_FR&siteid=300000010&rffrid=sem.hcom.FR.AMP.003.00.03.s.s.kwrd=device.creative.15480311.210327.adposition.targetid.loc_physical_ms.loc_interest_ms.keyword.1693913867400800001.aw.ds&PSRC=_psrc&semcid=HCOM-FR.UB.ADMARKETPLACE.GT-C-FR.HOTEL&SEMDTL=a1210327.b115480311.g1targetid.l1.e1device.m1gclid.r1_expediakwid.c1_expediaadid.j1loc_physical_ms.k1loc_interest_ms.d1creative.h1matchtype.i1feeditemid.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&mfadid=adm",
+				"hostname": "fr.hotels",
+				"sendAttributionRequest": false,
+				"label": "Hotels.com",
+				"show_sponsored_label": true,
+				"sponsored_position": 2,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=16.0.0&key=1693913867400800001.2&ci=1693913867770.12791&ctag=1693913867400800001",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4QqZ1ClZ1pHr4pbW1pbWfpbX7ReNxR3UIG8zInwYIFIVs9eYiGINHrwkiFXwxYIZjF8XgClWfC2X7R4dHQ8zJnErj%3DcO7R4dHQfz4Z2WfZLnHG3Z5FwqgCfX1p8d4Cxr1BINI9HuiF2z4Z2WfZLnHmcux%3DcvImauiF2zfQlWfZ8r7ncqIr7VjGbuiF2zfCDk1pbZfClnj9wWIBdvIpkY7R4TJr2uJREuHnEYgC8nHr7wHG3vjnDuiF2z4pHZfBIWJ%3DcQIFdwJR2uiF2zfCbW4Wyy",
+				"sponsored_tile_id": 74038,
+				"partner": "amp",
+				"favicon": "https://contile-images.services.mozilla.com/NFID2PaNJaR3mcE18BFgudhY6mkekkTZOy7CcB27QzE.8480.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 234,
+				"guid": "lycePEsSwYjz",
+				"lastVisitDate": 1693916976513,
+				"title": "CELENE",
+				"url": "https://celene.univ-orleans.fr/",
+				"type": "history",
+				"screenshot": null,
+				"hostname": "celene.univ-orleans",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.leboncoin.fr/",
+				"hostname": "leboncoin",
+				"sendAttributionRequest": false,
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/leboncoin-fr@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/leboncoin-fr.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://twitter.com/",
+				"hostname": "twitter",
+				"sendAttributionRequest": false,
+				"label": "Twitter",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/twitter-com.ico",
+				"typedBonus": true
+			}
+		],
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"ASRouter": {
+		"initialized": false
+	},
+	"Snippets": {
+		"initialized": false
+	},
+	"Prefs": {
+		"initialized": true,
+		"values": {
+			"default.sites": "https://www.youtube.com/,https://www.facebook.com/,https://www.wikipedia.org/,https://www.amazon.fr/,https://www.leboncoin.fr/,https://twitter.com/",
+			"feeds.section.topstories.options": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"hidden\":false,\"provider_icon\":\"chrome://global/skin/icons/pocket.svg\",\"provider_name\":\"Pocket\",\"read_more_endpoint\":\"https://getpocket.com/explore/trending?src=fx_new_tab\",\"stories_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=fr&feed_variant=default_spocs_on\",\"stories_referrer\":\"https://getpocket.com/recommendations\",\"topics_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=fr\",\"show_spocs\":true}",
+			"feeds.topsites": true,
+			"hideTopSitesTitle": false,
+			"showSponsored": true,
+			"showSponsoredTopSites": true,
+			"pocketCta": "{\"cta_button\":\"\",\"cta_text\":\"\",\"cta_url\":\"\",\"use_cta\":false}",
+			"showSearch": true,
+			"feeds.snippets": false,
+			"topSitesRows": 1,
+			"telemetry": true,
+			"telemetry.ut.events": false,
+			"telemetry.structuredIngestion.endpoint": "https://incoming.telemetry.mozilla.org/submit",
+			"section.highlights.includeVisited": true,
+			"section.highlights.includeBookmarks": true,
+			"section.highlights.includePocket": true,
+			"section.highlights.includeDownloads": true,
+			"section.highlights.rows": 1,
+			"section.topstories.rows": 1,
+			"sectionOrder": "topsites,topstories,highlights",
+			"improvesearch.noDefaultSearchTile": true,
+			"improvesearch.topSiteSearchShortcuts.searchEngines": "google,amazon",
+			"improvesearch.topSiteSearchShortcuts.havePinned": "",
+			"asrouter.devtoolsEnabled": false,
+			"asrouter.providers.onboarding": "{\"id\":\"onboarding\",\"type\":\"local\",\"localProvider\":\"OnboardingMessageProvider\",\"enabled\":true,\"exclude\":[]}",
+			"discoverystream.flight.blocks": "{}",
+			"discoverystream.config": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"collapsible\":true,\"enabled\":true,\"show_spocs\":true,\"hardcoded_layout\":true,\"layout_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/newtab/layout?version=1&consumer_key=$apiKey&layout_variant=basic\"}",
+			"discoverystream.endpoints": "https://getpocket.cdn.mozilla.net/,https://firefox-api-proxy.cdn.mozilla.net/,https://spocs.getpocket.com/",
+			"discoverystream.isCollectionDismissible": true,
+			"discoverystream.onboardingExperience.dismissed": false,
+			"discoverystream.region-basic-layout": false,
+			"discoverystream.spoc.impressions": "{}",
+			"discoverystream.endpointSpocsClear": "https://spocs.getpocket.com/user",
+			"discoverystream.rec.impressions": "{\"1012653008201157\":1693916735650,\"2585416609621031\":1693916735651,\"2047184209132938\":1693916735651}",
+			"showRecentSaves": true,
+			"feeds.aboutpreferences": true,
+			"feeds.newtabinit": true,
+			"feeds.places": true,
+			"feeds.prefs": true,
+			"feeds.sections": true,
+			"feeds.section.highlights": false,
+			"feeds.system.topstories": true,
+			"feeds.systemtick": true,
+			"feeds.telemetry": true,
+			"feeds.favicon": true,
+			"feeds.system.topsites": true,
+			"feeds.recommendationprovider": true,
+			"feeds.discoverystreamfeed": true,
+			"isPrivateBrowsingEnabled": true,
+			"platform": "linux",
+			"fxa_endpoint": "https://accounts.firefox.com/",
+			"appUpdateChannel": "release",
+			"improvesearch.topSiteSearchShortcuts": true,
+			"mayHaveSponsoredTopSites": true,
+			"improvesearch.handoffToAwesomebar": true,
+			"urlbar.placeholderName": "",
+			"featureConfig": {
+				"customizationMenuEnabled": null,
+				"topSitesContileEnabled": true
+			},
+			"pocketConfig": {
+				"spocPositions": "1,5,7,11,18,20",
+				"spocTopsitesPositions": "2",
+				"spocAdTypes": "",
+				"spocZoneIds": "",
+				"spocTopsitesAdTypes": "",
+				"spocTopsitesZoneIds": "",
+				"spocSiteId": "",
+				"widgetPositions": "",
+				"hybridLayout": false,
+				"hideCardBackground": false,
+				"fourCardLayout": false,
+				"newFooterSection": false,
+				"saveToPocketCard": true,
+				"saveToPocketCardRegions": "",
+				"hideDescriptions": false,
+				"hideDescriptionsRegions": "",
+				"compactGrid": false,
+				"compactImages": false,
+				"imageGradient": false,
+				"titleLines": 3,
+				"descLines": 3,
+				"onboardingExperience": false,
+				"essentialReadsHeader": false,
+				"editorsPicksHeader": false,
+				"recentSavesEnabled": false,
+				"readTime": true,
+				"newSponsoredLabel": false,
+				"sendToPocket": true,
+				"recsPersonalized": false,
+				"spocsPersonalized": true,
+				"spocsCacheTimeout": null,
+				"regionStoriesConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionBffConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionStoriesBlock": "",
+				"localeListConfig": "",
+				"regionSpocsConfig": "US,CA,DE,GB,FR,IT,ES",
+				"topSitesContileSovEnabled": false
+			},
+			"logowordmark.alwaysVisible": true,
+			"feeds.section.topstories": true,
+			"discoverystream.enabled": true,
+			"discoverystream.sponsored-collections.enabled": false,
+			"discoverystream.hardcoded-basic-layout": false,
+			"discoverystream.personalization.enabled": true,
+			"discoverystream.personalization.override": false,
+			"discoverystream.personalization.modelKeys": "nb_model_arts_and_entertainment, nb_model_autos_and_vehicles, nb_model_beauty_and_fitness, nb_model_blogging_resources_and_services, nb_model_books_and_literature, nb_model_business_and_industrial, nb_model_computers_and_electronics, nb_model_finance, nb_model_food_and_drink, nb_model_games, nb_model_health, nb_model_hobbies_and_leisure, nb_model_home_and_garden, nb_model_internet_and_telecom, nb_model_jobs_and_education, nb_model_law_and_government, nb_model_online_communities, nb_model_people_and_society, nb_model_pets_and_animals, nb_model_real_estate, nb_model_reference, nb_model_science, nb_model_shopping, nb_model_sports, nb_model_travel",
+			"discoverystream.spocs-endpoint": "",
+			"discoverystream.spocs-endpoint-query": "",
+			"newNewtabExperience.colors": "#0090ED,#FF4F5F,#2AC3A2,#FF7139,#A172FF,#FFA437,#FF2A8A",
+			"region": "FR"
+		}
+	},
+	"Dialog": {
+		"visible": false,
+		"data": {}
+	},
+	"Sections": [
+		{
+			"title": {
+				"id": "newtab-section-header-pocket",
+				"values": {
+					"provider": "Pocket"
+				}
+			},
+			"rows": [],
+			"enabled": true,
+			"id": "topstories",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recommended-by-header",
+					"values": {
+						"provider": "Pocket"
+					}
+				},
+				"descString": {
+					"id": "home-prefs-recommended-by-description-new",
+					"values": {
+						"provider": "Pocket"
+					}
+				},
+				"nestedPrefs": [
+					{
+						"name": "showSponsored",
+						"titleString": "home-prefs-recommended-by-option-sponsored-stories",
+						"icon": "icon-info",
+						"eventSource": "POCKET_SPOCS"
+					}
+				],
+				"learnMore": {
+					"link": {
+						"href": "https://getpocket.com/firefox/new_tab_learn_more",
+						"id": "home-prefs-recommended-by-learn-more"
+					}
+				},
+				"collapsed": false,
+				"feed": "feeds.section.topstories"
+			},
+			"shouldHidePref": false,
+			"eventSource": "TOP_STORIES",
+			"icon": "chrome://global/skin/icons/pocket.svg",
+			"learnMore": {
+				"link": {
+					"href": "https://getpocket.com/firefox/new_tab_learn_more",
+					"message": {
+						"id": "newtab-pocket-learn-more"
+					}
+				}
+			},
+			"compactCards": false,
+			"rowsPref": "section.topstories.rows",
+			"maxRows": 4,
+			"availableLinkMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-topstories",
+					"values": {
+						"provider": "Pocket"
+					}
+				},
+				"icon": "check"
+			},
+			"shouldSendImpressionStats": true,
+			"dedupeFrom": [
+				"highlights"
+			],
+			"options": {
+				"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+				"hidden": false,
+				"provider_icon": "chrome://global/skin/icons/pocket.svg",
+				"provider_name": "Pocket",
+				"read_more_endpoint": "https://getpocket.com/explore/trending?src=fx_new_tab",
+				"stories_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=fr&feed_variant=default_spocs_on",
+				"stories_referrer": "https://getpocket.com/recommendations",
+				"topics_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=fr",
+				"show_spocs": true
+			},
+			"contextMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"initialized": false,
+			"dedupeConfigurations": [
+				{
+					"id": "topstories",
+					"dedupeFrom": [
+						"highlights"
+					]
+				}
+			]
+		},
+		{
+			"title": {
+				"id": "newtab-section-header-recent-activity"
+			},
+			"rows": [],
+			"enabled": false,
+			"id": "highlights",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recent-activity-header"
+				},
+				"descString": {
+					"id": "home-prefs-recent-activity-description"
+				},
+				"nestedPrefs": [
+					{
+						"name": "section.highlights.includeVisited",
+						"titleString": "home-prefs-highlights-option-visited-pages"
+					},
+					{
+						"name": "section.highlights.includeBookmarks",
+						"titleString": "home-prefs-highlights-options-bookmarks"
+					},
+					{
+						"name": "section.highlights.includeDownloads",
+						"titleString": "home-prefs-highlights-option-most-recent-download"
+					},
+					{
+						"name": "section.highlights.includePocket",
+						"titleString": "home-prefs-highlights-option-saved-to-pocket",
+						"hidden": false
+					}
+				],
+				"collapsed": false,
+				"feed": "feeds.section.highlights"
+			},
+			"shouldHidePref": false,
+			"eventSource": "HIGHLIGHTS",
+			"icon": "chrome://global/skin/icons/highlights.svg",
+			"compactCards": true,
+			"rowsPref": "section.highlights.rows",
+			"maxRows": 4,
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-highlights"
+				},
+				"icon": "chrome://global/skin/icons/highlights.svg"
+			},
+			"shouldSendImpressionStats": false,
+			"options": {},
+			"initialized": false
+		}
+	],
+	"Pocket": {
+		"isUserLoggedIn": null,
+		"pocketCta": {},
+		"waitingForSpoc": true
+	},
+	"Personalization": {
+		"lastUpdated": 1693917332855,
+		"initialized": true
+	},
+	"DiscoveryStream": {
+		"config": {
+			"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+			"collapsible": true,
+			"enabled": true,
+			"show_spocs": true,
+			"hardcoded_layout": true,
+			"layout_endpoint": "https://getpocket.cdn.mozilla.net/v3/newtab/layout?version=1&consumer_key=40249-e88c401e1b1f2242d9e441c4&layout_variant=basic"
+		},
+		"layout": [
+			{
+				"width": 12,
+				"components": [
+					{
+						"type": "TopSites",
+						"header": {
+							"title": {
+								"id": "newtab-section-header-topsites"
+							}
+						},
+						"placement": {
+							"name": "sponsored-topsites",
+							"ad_types": [
+								3120
+							],
+							"zone_ids": [
+								280143
+							]
+						},
+						"spocs": {
+							"probability": 1,
+							"prefs": [
+								"showSponsoredTopSites"
+							],
+							"positions": [
+								{
+									"index": 2
+								}
+							]
+						},
+						"properties": {}
+					},
+					{
+						"type": "Message",
+						"essentialReadsHeader": false,
+						"editorsPicksHeader": false,
+						"header": {
+							"title": {
+								"id": "newtab-section-header-pocket",
+								"values": {
+									"provider": "Pocket"
+								}
+							},
+							"subtitle": "",
+							"link_text": {
+								"id": "newtab-pocket-learn-more"
+							},
+							"link_url": "https://getpocket.com/firefox/new_tab_learn_more",
+							"icon": "chrome://global/skin/icons/pocket.svg"
+						},
+						"properties": {},
+						"styles": {
+							".ds-message": "margin-bottom: -20px"
+						}
+					},
+					{
+						"type": "CardGrid",
+						"properties": {
+							"items": 21,
+							"hybridLayout": false,
+							"hideCardBackground": false,
+							"fourCardLayout": false,
+							"compactGrid": false,
+							"essentialReadsHeader": false,
+							"editorsPicksHeader": false,
+							"onboardingExperience": false
+						},
+						"widgets": {
+							"positions": [],
+							"data": []
+						},
+						"cta_variant": "link",
+						"header": {
+							"title": ""
+						},
+						"placement": {
+							"name": "spocs",
+							"ad_types": [
+								3617
+							],
+							"zone_ids": [
+								217758,
+								217995
+							]
+						},
+						"feed": {
+							"embed_reference": null,
+							"url": "https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30"
+						},
+						"spocs": {
+							"probability": 1,
+							"positions": [
+								{
+									"index": 1
+								},
+								{
+									"index": 5
+								},
+								{
+									"index": 7
+								},
+								{
+									"index": 11
+								},
+								{
+									"index": 18
+								},
+								{
+									"index": 20
+								}
+							]
+						}
+					},
+					{
+						"type": "Navigation",
+						"newFooterSection": false,
+						"properties": {
+							"alignment": "left-align",
+							"links": [
+								{
+									"name": "Self improvement",
+									"url": "https://getpocket.com/explore/self-improvement?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Food",
+									"url": "https://getpocket.com/explore/food?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Entertainment",
+									"url": "https://getpocket.com/explore/entertainment?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Health & fitness",
+									"url": "https://getpocket.com/explore/health?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Science",
+									"url": "https://getpocket.com/explore/science?utm_source=pocket-newtab"
+								},
+								{
+									"name": "More recommendations ›",
+									"url": "https://getpocket.com/explore?utm_source=pocket-newtab"
+								}
+							],
+							"extraLinks": [
+								{
+									"name": "Career",
+									"url": "https://getpocket.com/explore/career?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Technology",
+									"url": "https://getpocket.com/explore/technology?utm_source=pocket-newtab"
+								}
+							],
+							"privacyNoticeURL": {
+								"url": "https://www.mozilla.org/privacy/firefox/#suggest-relevant-content",
+								"title": {
+									"id": "newtab-section-menu-privacy-notice"
+								}
+							}
+						},
+						"header": {
+							"title": {
+								"id": "newtab-pocket-read-more"
+							}
+						},
+						"styles": {
+							".ds-navigation": "margin-top: -10px;"
+						}
+					}
+				]
+			}
+		],
+		"lastUpdated": null,
+		"isPrivacyInfoModalVisible": false,
+		"isCollectionDismissible": true,
+		"feeds": {
+			"data": {
+				"https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30": {
+					"lastUpdated": 1693916513420,
+					"data": {
+						"settings": {},
+						"recommendations": [
+							{
+								"id": 1012653008201157,
+								"url": "https://madame.lefigaro.fr/societe/actu/eurosummer-des-americaines-racontent-leurs-desillusions-de-vacances-en-france-20230901?utm_source=pocket-newtab-fr-fr",
+								"title": "#EuroSummer : des Américaines racontent leurs désillusions de vacances en France",
+								"excerpt": "Depuis début juillet, un nouveau hashtag gangrène TikTok. Utilisé près de 700.000 fois sur le réseau social chinois, il témoigne de la désillusion des touristes, Américaines pour la plupart, voyageant en Europe.",
+								"publisher": "madame.lefigaro.fr",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/a334802b-5abf-49ed-b70a-cf9dc14965f0.jpeg",
+								"score": 1
+							},
+							{
+								"id": 2047184209132938,
+								"url": "https://www.slate.fr/story/252396/covid-rentree-nouveaux-variants-eris-augmentation-cas-epidemie?utm_source=pocket-newtab-fr-fr",
+								"title": "Covid-19: avec l'arrivée du variant Eris, le retour d'un protocole sanitaire?",
+								"excerpt": "Le début de l'été a été marqué par une sorte d'insouciance sur le front du Covid. Mais, depuis début août, le nombre de cas apparaît en augmentation.",
+								"publisher": "Slate.fr",
+								"time_to_read": 11,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4a2c0946-a9ad-4bf0-9adf-36a775848761.jpeg",
+								"score": 1
+							},
+							{
+								"id": 2585416609621031,
+								"url": "https://www.radiofrance.fr/franceinter/patisserie-les-cinq-conseils-du-chef-patissier-de-l-hotel-de-crillon-pour-reussir-son-flan-3298429?utm_source=pocket-newtab-fr-fr",
+								"title": "Pâtisserie : les cinq conseils du chef pâtissier de l'Hôtel de Crillon pour réussir son flan",
+								"excerpt": "Il a le flan en poupe. Au rayon pâtisserie, le flan s'offre un retour en grâce. Longtemps considéré comme un coupe-faim ou un flamby gélatineux, ce dessert, l'un des plus anciens de France, a gagné ses lettres de noblesse.",
+								"publisher": "radiofrance.fr",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/45005902-fd76-4940-92a3-0da413ac2206.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1440715208370701,
+								"url": "https://www.lefigaro.fr/actualite-france/sa-demande-de-naturalisation-est-refusee-car-il-ne-sait-pas-qui-est-edith-cresson-20230902?utm_source=pocket-newtab-fr-fr",
+								"title": "Sa demande de naturalisation est refusée car il ne sait pas qui est Édith Cresson",
+								"excerpt": "Un jeune homme albanais de 25 ans, résidant en France depuis 12 ans, s’est vu refuser la naturalisation pour des motifs flous, selon Le Parisien. Il semblait être le candidat idéal.",
+								"publisher": "Le Figaro",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d58ca43f-cb03-45e2-ba78-412188682d1c.jpeg",
+								"score": 1
+							},
+							{
+								"id": 4137331935605462,
+								"url": "https://www.20minutes.fr/paris/4051172-20230903-paris-vont-devenir-trottinettes-electriques?utm_source=pocket-newtab-fr-fr",
+								"title": "Trottinettes à Paris : Que vont-elles devenir ?",
+								"excerpt": "Vous aimiez bien louer une trottinette électrique pour vos déplacements à Paris ? Vous devrez maintenant changer vos habitudes. Depuis le 1er septembre, les 15.000 trottinettes électriques des opérateurs privés Lime, Dott et Tier ont été retirées des trottoirs de la capitale.",
+								"publisher": "20 Minutes",
+								"time_to_read": 2,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/9a565ef0-6973-4882-9a46-1b34e2198e2b.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1057977158509788,
+								"url": "https://www.futura-sciences.com/sante/questions-reponses/corps-humain-sont-symptomes-systeme-immunitaire-affaibli-19283/?utm_source=pocket-newtab-fr-fr",
+								"title": "Quels sont les symptômes d'un système immunitaire affaibli ?",
+								"excerpt": "Lorsque notre système immunitaire fonctionne à son plein potentiel, il est notre bouclier naturel contre les infections et les maladies. Cependant, il peut arriver que ce mécanisme de défense vital soit affaibli, ce qui peut rendre notre corps plus vulnérable aux envahisseurs pathogènes. ",
+								"publisher": "Futura-Sciences",
+								"time_to_read": 2,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/9917e676-1761-4087-87a3-be34bfd2ab02.jpeg",
+								"score": 1
+							},
+							{
+								"id": 2775952755155436,
+								"url": "https://www.beauxarts.com/grand-format/les-grands-peintres-etaient-ils-tres-riches/?utm_source=pocket-newtab-fr-fr",
+								"title": "Les grands peintres étaient-ils très riches ?",
+								"excerpt": "À partir de la Renaissance, les puissants des cours d’Europe vont s’arracher les meilleurs peintres. La concurrence est rude pour décrocher le plus beau contrat ! Mais combien gagnaient vraiment des maîtres comme Titien, Véronèse et plus tard Rubens ? Chaque jour, Beaux Arts répond à toutes les questions que vous vous posez sur l’art.",
+								"publisher": "beauxarts.com",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/01e124a2-9c69-4278-92a1-8298caeff541.jpeg",
+								"score": 1
+							},
+							{
+								"id": 235267088860351,
+								"url": "https://www.la-croix.com/Sciences-et-ethique/Sante-quelles-sont-prerogatives-pharmacien-2023-09-01-1201280964?utm_source=pocket-newtab-fr-fr",
+								"title": "Santé : quelles sont les prérogatives du pharmacien ?",
+								"excerpt": "La première ministre a autorisé jeudi 31 août les pharmaciens à prescrire des antibiotiques pour les cystites et les angines, après la réalisation d’un test. Pour favoriser l’accès aux actes de soin courants, les prérogatives de ces professionnels de santé se sont élargies ces dernières années.",
+								"publisher": "la-croix.com",
+								"time_to_read": 2,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/285269b5-65f3-4808-9275-b4bcc8025988.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1855348126970246,
+								"url": "https://www.slate.fr/story/252426/generation-z-jeunes-videos-reseaux-sociaux-pieds-sandales?utm_source=pocket-newtab-fr-fr",
+								"title": "Pourquoi la génération Z ne montre-t-elle jamais ses pieds?",
+								"excerpt": "Porter des sandales sans chaussettes, c'est un truc de boomer.",
+								"publisher": "Slate.fr",
+								"time_to_read": 3,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/845e01f6-e7bb-423f-a4f7-e09f0125cd13.jpeg",
+								"score": 1
+							},
+							{
+								"id": 2469768673013364,
+								"url": "https://www.neonmag.fr/?authId=d4c925c1b738347bf115527ea9294384&redirectUri=%2Fsante-psycho%2Frelations-toxiques-pourquoi-ignorons-nous-les-red-flags-une-psychotherapeute-devoile-5-raisons-561323&utm_source=pocket-newtab-fr-fr",
+								"title": "Relations toxiques : pourquoi ignorons-nous les \"red flags\" ? Une psychothérapeute dévoile 5 raisons",
+								"excerpt": "\"Attention, red flag !\". Il arrive que notre cerveau nous dise cette petite phrase au début d'une nouvelle relation... sans que nous ne l'écoutions forcément. Malgré des signaux d'alerte, certain·e·s décident en effet de se lancer tête baissée dans une histoire pourtant... vouée à l'échec. Voici pourquoi, selon une experte.",
+								"publisher": "neonmag.fr",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/3e1dd71f-56eb-4b29-90fe-3eae20d89a83.jpeg",
+								"score": 1
+							},
+							{
+								"id": 2337137017014251,
+								"url": "https://www.geo.fr/?authId=d66a930e7b79860e8efd7301b034d86a&redirectUri=%2Fenvironnement%2Fchangement-climatique-un-milliard-de-personnes-pourraient-mourir-dans-le-siecle-a-venir-regle-1000-tonnes-216406&utm_source=pocket-newtab-fr-fr",
+								"title": "Changement climatique : un milliard de personnes pourraient mourir dans le siècle à venir",
+								"excerpt": "Selon une synthèse d'articles récents sur le taux de mortalité causé par le changement climatique, un milliard de personnes pourraient disparaître au XXIe siècle. Mais le lien entre les décès et le changement climatique n'est pas toujours aisé à quantifier.",
+								"publisher": "geo.fr",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/496c8feb-ab10-411b-8d58-7142fc40a9e1.jpeg",
+								"score": 1
+							},
+							{
+								"id": 3991195360515737,
+								"url": "https://korii.slate.fr/tech/hackers-chinois-fausses-applications-signal-plus-messenger-telegram-flygram-stores-google-samsung-malwares-ouighours?utm_source=pocket-newtab-fr-fr",
+								"title": "Des hackers chinois ont mis en ligne de fausses applications Signal et Telegram sur les stores de Google et Samsung",
+								"excerpt": "Ils avaient déjà ciblé la communauté ouïghoure.",
+								"publisher": "korii.slate.fr",
+								"time_to_read": 2,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ba4700ab-7452-49a5-9d98-4b7a09b6bb41.jpeg",
+								"score": 1
+							},
+							{
+								"id": 610653992186364,
+								"url": "https://theconversation.com/pourquoi-tester-les-medicaments-sur-des-animaux-males-est-problematique-pour-la-sante-des-femmes-212727?utm_source=pocket-newtab-fr-fr",
+								"title": "Pourquoi tester les médicaments sur des animaux mâles est problématique pour la santé des femmes",
+								"excerpt": "Les scientifiques qui s’intéressent à certains problèmes de santé humaine identifient d’ailleurs de plus en plus de différences liées au sexe.",
+								"publisher": "The Conversation",
+								"time_to_read": 6,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/2108f259-5dc0-4634-8969-1a82ab7ecc56.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1364213459399605,
+								"url": "https://www.midilibre.fr/2023/09/04/retour-des-mathematiques-lutte-contre-le-harcelement-interdiction-de-labaya-ce-qui-change-pour-cette-rentree-2023-11424289.php?utm_source=pocket-newtab-fr-fr",
+								"title": "Retour des mathématiques, lutte contre le harcèlement, interdiction de l'abaya... ce qui change pour cette rentrée 2023",
+								"excerpt": "Aujourd'hui près de 11 997 900 élèves vont faire leur rentrée en France. L'occasion de faire le point sur les principaux changements prévus pour cette année 2023-2024. Afin de \"rendre le métier de professeur plus attractif\" le gouvernement a annoncé plusieurs mesures.",
+								"publisher": "midilibre.fr",
+								"time_to_read": 3,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/c8e00069-ef5f-40a8-9b0d-ac84b5e73531.jpeg",
+								"score": 1
+							},
+							{
+								"id": 2758446572164970,
+								"url": "https://www.huffingtonpost.fr/life/article/zones-bleues-quels-sont-ces-endroits-du-monde-ou-l-on-vit-plus-longtemps-et-en-meilleure-sante-clx1_222355.html?utm_source=pocket-newtab-fr-fr",
+								"title": "« Zones bleues » : quels sont ces endroits du monde où l’on vit plus longtemps, et en meilleure santé ?",
+								"excerpt": "Imaginez un endroit où l’on vivrait longtemps, en bonne santé, sans avoir spécialement besoin de faire attention à sa ligne ou de faire du sport. Une utopie ? Pas si sûr.",
+								"publisher": "Le HuffPost",
+								"time_to_read": 3,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/0b6230b4-1f01-4eaa-a8dc-f0fba7808755.jpeg",
+								"score": 1
+							},
+							{
+								"id": 3021420793128372,
+								"url": "https://www.bfmtv.com/tech/astuces/rentree-scolaire-2023-comment-securiser-le-premier-smartphone-de-votre-enfant_AN-202309030024.html?utm_source=pocket-newtab-fr-fr",
+								"title": "Rentrée scolaire 2023: comment sécuriser le premier smartphone de votre enfant",
+								"excerpt": "Avant de remettre son premier smartphone à votre enfant, il convient d'adopter certaines précautions pour s'assurer qu'il l'utilise de manière sûre et équilibrée. A l'approche de la rentrée scolaire, vous avez peut être décidé d'offrir à votre enfant son premier smartphone.",
+								"publisher": "BFMTV",
+								"time_to_read": 3,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/8c8e97da-425b-469a-8bb9-67555e018de0.jpeg",
+								"score": 1
+							},
+							{
+								"id": 922890526377366,
+								"url": "https://www.elle.fr/Loisirs/Musique/News/Taylor-Swift-devient-la-premiere-femme-avec-100-millions-d-auditeurs-mensuels-sur-Spotify-4146728?utm_source=pocket-newtab-fr-fr",
+								"title": "Taylor Swift devient la première femme avec 100 millions d’auditeurs mensuels sur Spotify",
+								"excerpt": "Qui dit Taylor Swift dit « records ». Entre albums classés, nombre d’auditeurs et tournée mondiale, la chanteuse continue de s’imposer. Dernier record en date : 100 millions d’auditeurs mensuels sur Spotify.",
+								"publisher": "elle.fr",
+								"time_to_read": 2,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/91adf974-1f31-4770-8224-21a94f8d4f49.jpeg",
+								"score": 1
+							},
+							{
+								"id": 2636128417761814,
+								"url": "https://www.ouest-france.fr/sante/sante-comment-la-plateforme-de-videos-youtube-sequipe-pour-contrer-la-desinformation-medicale-8c914c68-41b5-11ee-ae6d-069db0645c1b?utm_source=pocket-newtab-fr-fr",
+								"title": "YouTube renforce la lutte contre la désinformation médicale",
+								"excerpt": "Après la période de Covid et son lot de désinformation virale sur les vaccins ou les masques, YouTube met à jour son « règlement santé » pour supprimer les contenus dangereux dans ce domaine sensible où les charlatans savent profiter de la détresse des patients. La plateforme réfléchit aussi à une structure de contrôle des contenus à plus long terme.",
+								"publisher": "Ouest-France",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/978ea22c-6b22-449d-b522-e4d3409a320e.png",
+								"score": 1
+							},
+							{
+								"id": 3660826722690822,
+								"url": "https://www.radiofrance.fr/franceculture/podcasts/sous-les-radars/rentree-ce-que-nos-vacances-disent-de-nous-4671212?utm_source=pocket-newtab-fr-fr",
+								"title": "Rentrée : ce que nos vacances disent de nous",
+								"excerpt": "La rentrée est l'occasion de s'interroger sur le sens du temps des vacances, qui s'achève : repos, coupure avec le rythme de l'année, pause nécessaire au resserrement des liens personnels ? Comment évoluent ces conceptions, y compris pour les 40 % de Français qui ne partent pas ?",
+								"publisher": "radiofrance.fr",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/b9b464af-67b6-4aa6-954a-2cd4852f0510.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1614834619557485,
+								"url": "https://www.femina.fr/article/5-sites-ou-grandes-enseignes-pour-revendre-vos-livres-facilement?utm_source=pocket-newtab-fr-fr",
+								"title": "5 sites ou grandes enseignes pour revendre vos livres facilement",
+								"excerpt": "Vous aimez lire mais vous n’avez plus de place sur vos étagères ? Pensez à la revente. Romans, bande-dessinées… les livres d’occasion ont plus que jamais la cote et il ne manque pas de solutions pour mettre en vente vos ouvrages, rapidement et sans risque.",
+								"publisher": "femina.fr",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/451099de-070c-4aba-ab3c-f5b2a1e00ac9.jpeg",
+								"score": 1
+							},
+							{
+								"id": 3855548322853554,
+								"url": "https://leparticulier.lefigaro.fr/jcms/c_119373/impots-locaux/taxe-fonciere-jusqu-a-5-ans-d-exoneration-en-cas-de-travaux-d-economie-d-energie-20230831?utm_source=pocket-newtab-fr-fr",
+								"title": "Taxe foncière : jusqu'à 5 ans d'exonération en cas de travaux d'économie d'énergie",
+								"excerpt": "Dans certaines communes, les propriétaires ayant acheté des équipements ou réalisé des travaux en vue d'économies d'énergie peuvent bénéficier d'une réduction, voire d'une exonération de la taxe foncière. À condition de remplir plusieurs conditions.",
+								"publisher": "leparticulier.lefigaro.fr",
+								"time_to_read": 3,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/bd4efb12-9796-4d44-b571-2a85251acc3b.jpeg",
+								"score": 1
+							},
+							{
+								"id": 3194206718677702,
+								"url": "https://france3-regions.francetvinfo.fr/normandie/seine-maritime/rouen/l-uniforme-a-l-ecole-publique-en-france-une-fausse-bonne-idee-2832797.html?utm_source=pocket-newtab-fr-fr",
+								"title": "L'uniforme à l'école publique en France, une fausse bonne idée ?",
+								"excerpt": "Plusieurs villes veulent expérimenter cette année des tenues uniformes pour les élèves d'écoles publiques.",
+								"publisher": "france3-regions.francetvinfo.fr",
+								"time_to_read": 3,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4fb16510-a882-45a9-936a-1c1fe8210e1e.jpeg",
+								"score": 1
+							},
+							{
+								"id": 4345657180231910,
+								"url": "https://www.vanityfair.fr/article/anatomie-d-une-chute-avocat-conseille-justine-triet-analyse-la-palme-d-or?utm_source=pocket-newtab-fr-fr",
+								"title": "«Anatomie d'une chute» : l'avocat qui a conseillé Justine Triet analyse la Palme d'or",
+								"excerpt": "De quoi parlent les avocats dans les couloirs des palais de justice ? De leurs affaires en cours ? Ces jours-ci, visiblement, ils jouent surtout les critiques cinéma : « Beaucoup de confrères m'ont fait de très bon retours sur Anatomie d'une chute », nous assure Me Vincent Courcelle-Labrousse,",
+								"publisher": "vanityfair.fr",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/22083598-ccbb-4f9c-a595-c4eba52a41c0.jpeg",
+								"score": 1
+							},
+							{
+								"id": 3780933011057280,
+								"url": "https://www.gqmagazine.fr/article/meilleures-techniques-pour-se-calmer-quand-une-situation-devient-trop-compliquee-a-gerer?utm_source=pocket-newtab-fr-fr",
+								"title": "Voici les 4 meilleures techniques pour se calmer quand une situation devient trop compliquée à gérer",
+								"excerpt": "Face au rythme effréné de la vie, les gens sont forcés de chercher les meilleures techniques pour se calmer et se détendre. Heureusement, certaines techniques sont faciles à suivre et ne nécessitent qu'un entretien de quelques minutes entre soi et soi-même.",
+								"publisher": "gqmagazine.fr",
+								"time_to_read": 3,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/9667c897-63bb-4ce1-a1e1-73b9a260e953.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1800363229788686,
+								"url": "https://www.nouvelobs.com/culture/20230827.OBS77405/huit-series-qui-nous-promettent-une-bonne-rentree.html?utm_source=pocket-newtab-fr-fr",
+								"title": "Huit séries qui nous promettent une bonne rentrée",
+								"excerpt": "Après un été seriel plutôt morose, chaînes et plateformes sortent le grand jeu pour la rentrée. Voici une sélection de huit nouveautés où les séries françaises tirent leur épingle du jeu.",
+								"publisher": "L'Obs",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/35aad146-a8cc-4e5c-ab55-0375c59698a5.png",
+								"score": 1
+							},
+							{
+								"id": 3440752271211612,
+								"url": "https://www.lepoint.fr/sante/pourquoi-il-ne-faut-surtout-pas-mettre-de-banane-dans-les-smoothies-29-08-2023-2533231_40.php?utm_source=pocket-newtab-fr-fr",
+								"title": "Pourquoi il ne faut surtout pas mettre de banane dans les smoothies",
+								"excerpt": "Le smoothie peut être excellent pour le cœur et la mémoire. Sauf s’il contient de la banane qui vient jouer les trouble-fêtes. On vous explique. L'heure est grave pour tous les amateurs de smoothies.",
+								"publisher": "Le Point",
+								"time_to_read": 2,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/bea998fa-5af5-4e6b-a11d-69cbeeb9c2fb.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1326106415766144,
+								"url": "https://www.femina.fr/article/qui-sont-les-dinks-ce-type-de-voyageurs-qui-monopolisent-les-vacances-en-septembre?utm_source=pocket-newtab-fr-fr",
+								"title": "Qui sont les DINKs, ce type de voyageurs qui monopolise les vacances en septembre ?",
+								"excerpt": "Les DINKs adorent le mois de septembre pour partir en vacances ! Découvrez quels voyageurs se cachent précisément derrière cet acronyme anglophone.",
+								"publisher": "femina.fr",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/3ea8b273-cbb8-4df1-91d3-20a2453ba557.jpeg",
+								"score": 1
+							},
+							{
+								"id": 1860769524184217,
+								"url": "https://www.futura-sciences.com/planete/actualites/loups-impact-inattendu-loup-solitaire-biodiversite-cette-ile-107261/?utm_source=pocket-newtab-fr-fr",
+								"title": "L'impact inattendu d'un loup solitaire sur la biodiversité de cette île",
+								"excerpt": "La réintroduction d'un loup a permis de revitaliser en deux décennies l'écosystème du parc national de l’Isle Royale aux États-Unis, et de réduire les niveaux de consanguinité dans la meute de loups indigène. Une étude démontre l'incidence de ce sauvetage génétique sur la dynamique forestière boréale grâce au renouvellement des caractéristiques génétiques de cette population de prédateurs.",
+								"publisher": "Futura-Sciences",
+								"time_to_read": 4,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/56ef8f4f-cfd9-4a6c-b44a-03bbd7e448c6.jpeg",
+								"score": 1
+							},
+							{
+								"id": 4286469374529035,
+								"url": "https://www.slate.fr/story/252363/catastrophe-aerienne-crash-avion-etats-unis-controleurs-pilotes?utm_source=pocket-newtab-fr-fr",
+								"title": "La prochaine catastrophe aérienne américaine est pour bientôt",
+								"excerpt": "«Tous les commandants de bord ont des histoires à raconter», déclare un pilote de ligne. «La question n'est pas de savoir si quelque chose va se produire, mais quand.»",
+								"publisher": "Slate.fr",
+								"time_to_read": 6,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/dfa9aac6-5fb3-4dfa-b4c8-f8b5713ddef6.jpeg",
+								"score": 1
+							},
+							{
+								"id": 927403143528939,
+								"url": "https://www.lefigaro.fr/conjoncture/la-croissance-des-arrets-maladie-n-est-pas-soutenable-avertit-aurelien-rousseau-20230827?utm_source=pocket-newtab-fr-fr",
+								"title": "La croissance des arrêts maladie n’est «pas soutenable», avertit Aurélien Rousseau",
+								"excerpt": "Le ministre de la Santé veut renforcer le nombre des contrôles et plaide pour la «responsabilité collective» pour freiner ces dépenses de santé.",
+								"publisher": "Le Figaro",
+								"time_to_read": 2,
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/31763590-87b1-4c7b-95ed-9a14619236e2.jpeg",
+								"score": 1
+							}
+						],
+						"status": "success"
+					}
+				}
+			},
+			"loaded": true
+		},
+		"spocs": {
+			"spocs_endpoint": "https://spocs.getpocket.com/spocs",
+			"lastUpdated": 1693916517106,
+			"data": {},
+			"loaded": true,
+			"frequency_caps": [],
+			"blocked": [],
+			"placements": [
+				{
+					"name": "sponsored-topsites",
+					"ad_types": [
+						3120
+					],
+					"zone_ids": [
+						280143
+					]
+				},
+				{
+					"name": "spocs",
+					"ad_types": [
+						3617
+					],
+					"zone_ids": [
+						217758,
+						217995
+					]
+				}
+			]
+		},
+		"experimentData": {
+			"utmSource": "pocket-newtab"
+		},
+		"recentSavesData": [],
+		"isUserLoggedIn": false,
+		"recentSavesEnabled": false,
+		"pocketButtonEnabled": true,
+		"saveToPocketCard": true,
+		"hideDescriptions": false,
+		"compactImages": false,
+		"imageGradient": false,
+		"newSponsoredLabel": false,
+		"titleLines": 3,
+		"descLines": 3,
+		"readTime": true
+	},
+	"Search": {
+		"fakeFocus": false,
+		"hide": false
+	}
+};
+
+:�k��           d� �E��C����       :about:home alt-data 1;82731,script version 20230824132758  �

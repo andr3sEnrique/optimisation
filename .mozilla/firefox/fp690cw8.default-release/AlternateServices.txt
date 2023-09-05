@@ -1,0 +1,7 @@
+https:push.services.mozilla.com:443:.::3	0	19605	https:push.services.mozilla.com:443:push.services.mozilla.com:443::n:1693916545:h3:n:1693916511:n::|n:y:
+https:consent.google.com:443:.:^partitionKey=%28https%2Cgoogle.com%29:3	0	19605	https:consent.google.com:443:consent.google.com:443::n:1693916775:h3:n:1693916511:n:^partitionKey=%28https%2Cgoogle.com%29:|n:y:
+https:encrypted-tbn0.gstatic.com:443:.:^partitionKey=%28https%2Cgoogle.com%29:3	0	19605	https:encrypted-tbn0.gstatic.com:443:encrypted-tbn0.gstatic.com:443::n:1693916800:h3:n:1693916511:n:^partitionKey=%28https%2Cgoogle.com%29:|n:y:
+https:safebrowsing.googleapis.com:443:.:^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:3	0	19605	https:safebrowsing.googleapis.com:443:safebrowsing.googleapis.com:443::n:1693917498:h3:n:1693916511:n:^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:|n:y:
+https:firefox-api-proxy.cdn.mozilla.net:443:.::3	0	19605	https:firefox-api-proxy.cdn.mozilla.net:443:firefox-api-proxy.cdn.mozilla.net:443::n:1693916545:h3:n:1693916511:n::|n:y:
+https:adservice.google.fr:443:.:^partitionKey=%28https%2Cgoogle.com%29:3	0	19605	https:adservice.google.fr:443:adservice.google.fr:443::n:1693917960:h3:n:1693916511:n:^partitionKey=%28https%2Cgoogle.com%29:|n:y:
+https:fonts.googleapis.com:443:.:^partitionKey=%28https%2Cuniv-orleans.fr%29:3	0	19605	https:fonts.googleapis.com:443:fonts.googleapis.com:443::n:1693916781:h3:n:1693916511:n:^partitionKey=%28https%2Cuniv-orleans.fr%29:|n:y:

@@ -1,0 +1,75 @@
+2023-09-05 14:43:37.737 [info] Log level: Info
+2023-09-05 14:43:37.737 [info] Validating found git in: "git"
+2023-09-05 14:43:37.737 [info] Using git "2.34.1" from "git"
+2023-09-05 14:43:37.738 [info] > git rev-parse --show-toplevel [5ms]
+2023-09-05 14:43:37.738 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.738 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.738 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.743 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.743 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.749 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.749 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.755 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.755 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.760 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.760 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.765 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.765 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.769 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.769 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.775 [info] > git rev-parse --show-toplevel [3ms]
+2023-09-05 14:43:37.775 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.780 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.780 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.785 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.785 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.792 [info] > git rev-parse --show-toplevel [3ms]
+2023-09-05 14:43:37.792 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.798 [info] > git rev-parse --show-toplevel [4ms]
+2023-09-05 14:43:37.798 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.803 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.803 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.808 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.808 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.812 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.812 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:43:37.817 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:43:37.817 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:47:32.957 [info] > git rev-parse --show-toplevel [4ms]
+2023-09-05 14:47:32.957 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:48:22.792 [info] > git rev-parse --show-toplevel [3ms]
+2023-09-05 14:48:22.792 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:48:43.608 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-05 14:48:43.608 [info] fatal: not a git repository (or any parent up to mount point /home/iut45)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-09-05 14:49:22.837 [info] > git rev-parse --show-toplevel [14ms]
+2023-09-05 14:49:22.849 [info] > git rev-parse --git-dir --git-common-dir [3ms]
+2023-09-05 14:49:22.866 [info] Open repository: /home/iut45/Etudiants/o22307937
+2023-09-05 14:49:22.874 [info] No remotes found in the git config file.
+2023-09-05 14:49:22.879 [info] > git config --get commit.template [1ms]
+2023-09-05 14:49:22.896 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [23ms]
+2023-09-05 14:49:23.390 [info] > git check-ignore -v -z --stdin [4ms]
+2023-09-05 14:49:23.445 [info] > git status -z -uall [537ms]
+2023-09-05 14:49:23.499 [info] No remotes found in the git config file.
+2023-09-05 14:49:23.505 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-09-05 14:49:23.505 [info] > git config --get commit.template [6ms]
+2023-09-05 14:49:23.789 [info] > git status -z -uall [281ms]
