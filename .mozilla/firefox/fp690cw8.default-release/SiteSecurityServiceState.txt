@@ -12,6 +12,7 @@ location.services.mozilla.com	0	19605	1725452513134,1,1
 www.google.com^firstPartyDomain=google-canonical.search.suggestions.mozilla	0	19605	1725452737343,1,0
 services.addons.mozilla.org	0	19605	1725452511406,1,0
 auth.univ-orleans.fr^partitionKey=%28https%2Cuniv-orleans.fr%29	0	19605	1709684792170,1,1
+spocs.getpocket.com	0	19605	1756990614969,1,0
 normandy.cdn.mozilla.net	0	19605	1725452513490,1,0
 shavar.services.mozilla.com^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla	0	19605	1725452514247,1,1
 alive.github.com^partitionKey=%28https%2Cgithub.com%29	0	19605	1725453988293,1,0
