@@ -67,7 +67,7 @@ int supprimer(lst l, int i){
 
         }
     }
-
+    //oui
     return 0;
 }
 
