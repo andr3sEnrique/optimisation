@@ -11,5 +11,6 @@ int main(){
     afficherListe(liste);
     supprimerEnTete(liste);
     afficherListe(liste);
+    //no
     return 0;
 }

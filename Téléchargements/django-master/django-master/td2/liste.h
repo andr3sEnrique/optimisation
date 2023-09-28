@@ -32,5 +32,5 @@ void inserer(lst l, int val, int i);
 int supprimerEnTete(lst l);
 int supprimer(lst l, int i);
 void afficherListe(lst l);
-
+//oui
 #endif
